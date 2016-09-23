@@ -2,40 +2,63 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAXLINE 1000
+#define MAXLINE 1000   /*tamaño maximo de la linea de entrada*/
 
-int getline_(char *s[], int max);
+int getline_(char *to[], int maxline);
+void copy_(char *to[], char *from[]);
 
-/*find: imprime lineas que coinciden con el patron del 1er argumento*/
-
-main(int argc, char *argv[])
+/*imprime la linea de entrada mas larga*/
+main()
 {
-    char line[MAXLINE];
-    int found=0;
+	int len;		/*longitud actual de la linea*/
+	int max;		/*maxima longitud vista hasta el momento*/
+	char *line[MAXLINE];	/*LINEA DE ENTRADA ACTUAL*/
+	char *longest[MAXLINE];	/*LA LINEA MAS LARGA SE GUARDA AQUI*/
 
-    if (argc !=2)
-        printf("Uso: find patrón \n");
-    else
-        while(getline_(line,MAXLINE)>0)
-            if(strstr(line,argv[1]) != NULL){
-                printf("%s",line);
-                found++;
-            }
-    return found;
+	max=0;
+	while ((len=getline_(line,MAXLINE))>0){
+
+		if (len>max){
+			max=len;
+			copy_(longest,line);
+		}
+	}
+	if(max>0)		/*hubo una linea*/
+		printf("%s",longest);
+	return 0;
+
 }
-
-int getline_(char *s[], int max)
+/*getline: lee una linea en s, regresa su longiud*/
+int getline_(char *s[],int lim)
 {
-    int c,i;
-    //c=line;
+	int c,i;
 
-    i=0;
-    while(--max > 0 && (c=getchar()) != EOF && c!='\n')
-        s[i++]=c;
-    if(c=='\n')
-        s[i++]=c;
-    s[i]='\0';
-    return i;
+	for(i=0;i<lim-1 && (c=getchar()) != EOF && c!= '\n';++i){
+		s[i]=c;
+		//printf("%c\n",s[i]);
+		//printf("%3d\n",lim);
+	}
+	if(c=='\n'){
+		s[i]=c;
+		++i;
+	}
+
+	s[i]='\0';
+	printf("el valor de i es: %d\n",i);
+	return i;
 }
+/*copy: copia from en to; supone que to es suficientemente grande*/
+void copy_(char *to[], char *from[])
+{
+	int i;
 
+	i=0;
+	//printf("El valor de to[i] es %c\n",to[i]);
+	//printf("El valor de from[i] es %c\n",to[i]);
 
+	while ((to[i] = from[i]) != '\0'){
+		//printf("El valor de to[i] es %c\n",to[i]);
+		//printf("El valor de from[i] es %c\n",to[i]);
+		++i;
+	}
+}
