@@ -10,6 +10,7 @@ struct node
 void crearlista(struct node *head,struct node *next,int n);
 void eliminar(struct node *head, struct node *next, int n);
 void inserini(struct node *head, struct node *next, int n);
+void imprimir(struct node *head, struct node *next, int n);
 
 main()
 {
@@ -18,53 +19,22 @@ main()
     struct node *next;
     head=malloc(sizeof(struct node));
     next=malloc(sizeof(struct node));
-    //head -> val = 1;
-
-
 //crear lista
     crearlista(head,next,6);
-//imprimir lista
-    struct node *t;
-    t = malloc(sizeof(struct node));
-    t = head;
+    imprimir(head,next,6);
 
-    while (t != NULL)
-    {
-        printf("%d\n", t->val);
-        t = t -> next;
-    }
 //eliminar
     eliminar(head,next,3);
-    printf("\n\n");
-    struct node *s;
-    s = malloc(sizeof(struct node));
-    s = head;
-
-    while (s != NULL)
-    {
-        printf("%d\n", s->val);
-        s = s -> next;
-    }
+    imprimir(head,next,6);
 //insertar al inicio
     inserini(head,next,22);
-    printf("\n\n");
-    struct node *r;
-    r = malloc(sizeof(struct node));
-    r = head;
-
-    while (r != NULL)
-    {
-        printf("%d\n", r->val);
-        r = r -> next;
-    }
-
+    imprimir(head,next,6);
 }
 
 void crearlista(struct node *head,struct node *next,int n){
     int i;
     struct node *prev,*cur;
     prev=malloc(sizeof(struct node));
-
 
     head -> val = 1;
     prev = head;
@@ -80,13 +50,8 @@ void crearlista(struct node *head,struct node *next,int n){
          prev = cur;
     }
     prev -> next = NULL;
-
-
-
-
 }
 void eliminar(struct node *head, struct node *next, int n){
-
     struct node *preve,*cure;
     preve=malloc(sizeof(struct node));
     cure=malloc(sizeof(struct node));
@@ -127,14 +92,26 @@ void inserini(struct node *head, struct node *next, int n){
     while (cure != NULL){
         temp = head;
         head = head -> next;
+        preve = cure;
+        cure = cure -> next;
     }*/
     head -> val = n;
     //preve = head;
     //cure = head -> next;
 
-
     //while (cure != NULL){}
+}
 
-
+void imprimir(struct node *head, struct node *next, int n){
+    struct node *z;
+    z = malloc(sizeof(struct node));
+    z = head;
+    //val=n;
+    while (z != NULL)
+    {
+        printf("%d\n", z->val);
+        z = z -> next;
+    }
+    printf("\n\n");
 }
 
