@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include "puntoarray.h"
+#include "puntoarrayvector.h"
 
 using std::cout;
 using std::endl;
