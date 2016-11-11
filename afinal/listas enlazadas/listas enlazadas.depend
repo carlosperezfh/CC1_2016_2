@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1476711506 source:f:\ipoo\2016_2\to_final\listas enlazadas\lista.c
+	"lista.h"
+	<stdlib.h>
+	<string.h>
+
+1476710200 f:\ipoo\2016_2\to_final\listas enlazadas\lista.h
+	<stdio.h>
+	"libro.h"
+
+1476453558 f:\ipoo\2016_2\to_final\listas enlazadas\libro.h
+	<stdio.h>
+
+1476753322 source:h:\ipoo\2016_2\to_final\listas enlazadas\lista.c
+	"lista.h"
+	<stdlib.h>
+	<string.h>
+
+1476751496 h:\ipoo\2016_2\to_final\listas enlazadas\lista.h
+	<stdio.h>
+	"libro.h"
+
+1476750910 h:\ipoo\2016_2\to_final\listas enlazadas\libro.h
+	<stdio.h>
+	<string.h>
+

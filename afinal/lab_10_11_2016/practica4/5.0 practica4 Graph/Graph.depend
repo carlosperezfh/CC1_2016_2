@@ -1,0 +1,53 @@
+# depslib dependency file v1.0
+1446667744 source:f:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\graph\main.cpp
+	<iostream>
+
+1478810672 source:h:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\graph\map.cpp
+	<cmath>
+	<iostream>
+	<map>
+	<algorithm>
+	<iterator>
+	<string>
+
+1478866164 source:h:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\graph\main.cpp
+	<cmath>
+	<iostream>
+	<map>
+	<algorithm>
+	<iterator>
+	<string>
+	<vector>
+	"Graph.h"
+
+1478865448 h:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\graph\graph.h
+	<cmath>
+	<iostream>
+	<map>
+	<algorithm>
+	<iterator>
+	<string>
+
+1478866252 source:f:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\5.0 practica4 graph\graph.cpp
+	<stdexcept>
+	"Graph.h"
+
+1478885312 f:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\5.0 practica4 graph\graph.h
+	<cmath>
+	<iostream>
+	<map>
+	<algorithm>
+	<iterator>
+	<string>
+	<vector>
+
+1478885554 source:f:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\5.0 practica4 graph\main.cpp
+	<cmath>
+	<iostream>
+	<map>
+	<algorithm>
+	<iterator>
+	<string>
+	<vector>
+	"Graph.h"
+

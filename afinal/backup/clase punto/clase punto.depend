@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1476968456 source:f:\ipoo\2016_2\to_final\clase punto\main.cpp
+	<iostream>
+	<stdlib.h>
+	<string.h>
+
+1476999368 source:h:\aipoo\2016_2\to_final\clase punto\main.cpp
+	<iostream>
+	"point.h"
+	<stdlib.h>
+	<string.h>
+
+1476999532 h:\aipoo\2016_2\to_final\clase punto\point.h
+
+1476998652 h:\aipoo\2016_2\to_final\clase punto\point.cpp
+	<iostream>
+	"point.h"
+	<stdlib.h>
+	<string.h>
+
+1476998652 source:h:\aipoo\2016_2\to_final\clase punto\point.cpp
+	<iostream>
+	"point.h"
+	<stdlib.h>
+	<string.h>
+
+1477000586 source:f:\aipoo\2016_2\to_final\clase punto\main.cpp
+	<iostream>
+	"point.h"
+	<stdlib.h>
+	<string.h>
+
+1477000600 f:\aipoo\2016_2\to_final\clase punto\point.h
+
+1477000600 source:f:\aipoo\2016_2\to_final\clase punto\point.cpp
+	<iostream>
+	"point.h"
+	<stdlib.h>
+	<string.h>
+

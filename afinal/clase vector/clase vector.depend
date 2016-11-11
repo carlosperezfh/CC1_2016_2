@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1477424046 source:h:\aipoo\2016_2\to_final\clase vector\main.cpp
+	<iostream>
+	"puntoarray.h"
+
+1477424020 h:\aipoo\2016_2\to_final\clase vector\puntoarray.h
+
+1477316646 source:h:\aipoo\2016_2\to_final\clase vector\puntoarray.cpp
+	<iostream>
+	<cmath>
+	"puntoarray.h"
+
+1477677586 source:f:\aipoo\2016_2\to_final\clase vector\puntoarrayvector.cpp
+	<iostream>
+	<cmath>
+	"puntoarrayvector.h"
+
+1477425828 f:\aipoo\2016_2\to_final\clase vector\puntoarrayvector.h
+
+1477678090 source:f:\aipoo\2016_2\to_final\clase vector\mainvector.cpp
+	<iostream>
+	"puntoarrayvector.h"
+

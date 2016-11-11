@@ -1,0 +1,77 @@
+# depslib dependency file v1.0
+1464322934 source:e:\ipoo\c++\alectura3\a_true\atrue\geometry.cpp
+	<iostream>
+	<cmath>
+	"geometry.h"
+
+1464322886 e:\ipoo\c++\alectura3\a_true\atrue\geometry.h
+
+1464626602 source:g:\ipoo\c++\alectura3\a_true\atrue\geometry.cpp
+	<iostream>
+	<cmath>
+	"geometry.h"
+
+1464322886 g:\ipoo\c++\alectura3\a_true\atrue\geometry.h
+
+1464626602 source:f:\ipoo\c++\alectura3\a_true\atrue\geometry.cpp
+	<iostream>
+	<cmath>
+	"geometry.h"
+
+1464322886 f:\ipoo\c++\alectura3\a_true\atrue\geometry.h
+
+1464626992 source:f:\ipoo\c++\alectura3\a_true\atrue\main.cpp
+	<iostream>
+	"geometry.h"
+
+1464698654 source:g:\ipoo\c++\alectura3\a_true\atrue\main.cpp
+	<iostream>
+	"geometry.h"
+
+1464626602 source:f:\aipoo\2016_2\to_final\lab_21_10_2016\a_true\atrue\geometry.cpp
+	<iostream>
+	<cmath>
+	"geometry.h"
+
+1464322886 f:\aipoo\2016_2\to_final\lab_21_10_2016\a_true\atrue\geometry.h
+
+1478184440 source:f:\aipoo\2016_2\to_final\lab_21_10_2016\a_true\atrue\main.cpp
+	<iostream>
+	"puntoarray.h"
+
+1477675648 f:\aipoo\2016_2\to_final\lab_21_10_2016\a_true\atrue\puntoarray.h
+
+1477675650 source:f:\aipoo\2016_2\to_final\lab_21_10_2016\a_true\atrue\puntoarray.cpp
+	<iostream>
+	<cmath>
+	"puntoarray.h"
+
+1478274028 source:h:\aipoo\2016_2\to_final\lab_21_10_2016\a_true\atrue\puntoarray.cpp
+	<iostream>
+	<cmath>
+	"puntoarray.h"
+
+1477675648 h:\aipoo\2016_2\to_final\lab_21_10_2016\a_true\atrue\puntoarray.h
+
+1478541692 source:h:\aipoo\2016_2\to_final\lab_21_10_2016\a_true\atrue\main.cpp
+	<iostream>
+	"puntoarray.h"
+
+1478784204 source:f:\aipoo\2016_2\afinal\lab_21_10_2016\a_true\atrue\main.cpp
+	<iostream>
+	"puntoarray.h"
+
+1478707818 f:\aipoo\2016_2\afinal\lab_21_10_2016\a_true\atrue\puntoarray.h
+
+1478707818 source:f:\aipoo\2016_2\afinal\lab_21_10_2016\a_true\atrue\puntoarray.cpp
+	<iostream>
+	<cmath>
+	"puntoarray.h"
+
+1478707818 source:h:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\atrue\puntoarray.cpp
+	<iostream>
+	<cmath>
+	"puntoarray.h"
+
+1478707818 h:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\atrue\puntoarray.h
+

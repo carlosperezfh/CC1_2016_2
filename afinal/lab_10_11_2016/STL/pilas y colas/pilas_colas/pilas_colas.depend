@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1466259902 source:g:\ipoo\c++\pilas y colas\pilas_colas\main.cpp
+	<iostream>
+
+1466488886 source:g:\ipoo\c++\pilas y colas\pilas_colas\pila_arreglo_dinamico.cpp
+	<iostream>
+

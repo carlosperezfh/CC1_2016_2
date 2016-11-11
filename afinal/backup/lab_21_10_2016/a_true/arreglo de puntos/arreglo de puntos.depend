@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1477064348 source:f:\aipoo\c++\alectura3\a_true\geometry.cpp
+	<iostream>
+	<cmath>
+	"geometry.h"
+
+1477064348 f:\aipoo\c++\alectura3\a_true\geometry.h
+

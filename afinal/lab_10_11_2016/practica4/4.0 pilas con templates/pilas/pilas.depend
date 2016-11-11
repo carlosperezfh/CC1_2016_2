@@ -1,0 +1,138 @@
+# depslib dependency file v1.0
+1446667744 source:h:\aipoo\2016_2\to_final\stl\pilas\pilas\main.cpp
+	<iostream>
+
+1477673290 source:f:\aipoo\2016_2\to_final\stl\pilas\pilas\main.cpp
+	<iostream>
+
+1478482650 source:h:\aipoo\2016_2\to_final\stl\pilas\backup  pilas\pilas\main.cpp
+	<iostream>
+	<iostream>
+	<algorithm>
+	<iterator>
+	<queue>
+	<vector>
+	"pilas.h"
+
+1478482734 source:h:\aipoo\2016_2\to_final\stl\pilas\backup  pilas\pilas\pilas.cpp
+	"pilas.h"
+	<iostream>
+	<algorithm>
+	<iterator>
+	<queue>
+	<vector>
+
+1478524380 h:\aipoo\2016_2\to_final\stl\pilas\backup  pilas\pilas\pilas.h
+
+1478564896 source:h:\aipoo\2016_2\to_final\stl\pilas\backup  pilas\pilas con templates\pilas\pilas.cpp
+	"pilas.h"
+	<iostream>
+	<algorithm>
+	<iterator>
+	<queue>
+	<vector>
+	<cassert>
+
+1478538598 h:\aipoo\2016_2\to_final\stl\pilas\backup  pilas\pilas con templates\pilas\pilas.h
+
+1478536856 source:h:\aipoo\2016_2\to_final\stl\pilas\backup  pilas\pilas con templates\pilas\prueba.cpp
+
+1478565480 source:f:\aipoo\2016_2\afinal\stl\pilas\backup  pilas\pilas con templates\pilas\main.cpp
+	<iostream>
+	<cassert>
+	<algorithm>
+	<iterator>
+	<queue>
+	<vector>
+	"pilas.cpp"
+
+1478789302 f:\aipoo\2016_2\afinal\stl\pilas\backup  pilas\pilas con templates\pilas\pilas.cpp
+	"pilas.h"
+	<iostream>
+	<algorithm>
+	<iterator>
+	<queue>
+	<vector>
+	<cassert>
+
+1478789460 f:\aipoo\2016_2\afinal\stl\pilas\backup  pilas\pilas con templates\pilas\pilas.h
+
+1478536856 source:f:\aipoo\2016_2\afinal\stl\pilas\backup  pilas\pilas con templates\pilas\prueba.cpp
+
+1478789302 source:f:\aipoo\2016_2\afinal\stl\pilas\backup  pilas\pilas con templates\pilas\pilas.cpp
+	"pilas.h"
+	<iostream>
+	<algorithm>
+	<iterator>
+	<queue>
+	<vector>
+	<cassert>
+
+1478789652 source:h:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\4.0 pilas con templates\pilas\main.cpp
+	<iostream>
+	<cassert>
+	<algorithm>
+	<iterator>
+	<queue>
+	<vector>
+	"pilas.cpp"
+
+1478789588 h:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\4.0 pilas con templates\pilas\pilas.cpp
+	"pilas.h"
+	<iostream>
+	<algorithm>
+	<iterator>
+	<queue>
+	<vector>
+	<cassert>
+
+1478789652 h:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\4.0 pilas con templates\pilas\pilas.h
+
+1478789588 source:h:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\4.0 pilas con templates\pilas\pilas.cpp
+	"pilas.h"
+	<iostream>
+	<algorithm>
+	<iterator>
+	<queue>
+	<vector>
+	<cassert>
+
+1478536856 source:h:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\4.0 pilas con templates\pilas\prueba.cpp
+
+1478878042 source:f:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\4.0 pilas con templates\pilas\main.cpp
+	<iostream>
+	<cassert>
+	<algorithm>
+	<iterator>
+	<queue>
+	<vector>
+	"pilas.cpp"
+
+1478878308 f:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\4.0 pilas con templates\pilas\pilas.cpp
+	"pilas.h"
+	<iostream>
+	<algorithm>
+	<iterator>
+	<queue>
+	<vector>
+	<cassert>
+
+1478878308 f:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\4.0 pilas con templates\pilas\pilas.h
+	<iostream>
+	<algorithm>
+	<iterator>
+	<queue>
+	<vector>
+	<cassert>
+
+1478536856 source:f:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\4.0 pilas con templates\pilas\prueba.cpp
+
+1478878308 source:f:\aipoo\2016_2\afinal\lab_10_11_2016\practica4\4.0 pilas con templates\pilas\pilas.cpp
+	"pilas.h"
+	<iostream>
+	<algorithm>
+	<iterator>
+	<queue>
+	<vector>
+	<cassert>
+

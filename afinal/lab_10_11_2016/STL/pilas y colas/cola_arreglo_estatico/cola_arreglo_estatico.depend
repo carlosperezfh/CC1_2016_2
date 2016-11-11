@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1478283902 source:f:\aipoo\2016_2\to_final\stl\pilas y colas\cola_arreglo_estatico\main.cpp
+	<iostream>
+	<string>
+	<math.h>
+

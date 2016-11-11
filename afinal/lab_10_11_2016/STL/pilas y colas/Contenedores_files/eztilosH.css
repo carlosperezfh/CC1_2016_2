@@ -1,0 +1,82 @@
+/* eztilosH.css */
+body {
+	font-family:"MS Arial Unicode", Arial, sans-serif; background: white;
+	font-size:10pt; color:#003388; margin-top:12pt; margin-bottom:6pt;
+}
+ img { max-width: 750px; }
+@media only screen and (min-width: 960px){
+    .top1, .ext, #foot {
+        width: 960px !important;
+        margin: 0 auto !important;
+    }
+    .ext {border:1px solid gray; line-height:150%;}
+}
+/*
+.ext {width:100%; margin:0; border:1px solid gray; line-height:150%;}
+*/
+.top1 {padding: 1px 5px 1px 5px; text-align:center;}
+.top2 {height:90px; padding:4px; background-color:#EEEEFF;}
+.left {float:left; width:160px; padding:5px;}
+.main {margin-left:0; border-left:1px solid gray; padding: 15px 10px 5px 20px; line-height:115%;}
+.lmenu {line-height:115%; background-color:#DDDDFF; margin:0; padding:5px;}
+.foot {padding:5px 5px 1px 15px; background-color:#EEEEFF; clear:left;}
+
+A:link {color:blue;}
+/* A:active {font-weight:bold;}
+   Atributos: link, visited, active, hover */
+
+ul	{list-style-position:outside;}
+li	{margin-bottom:6pt;}
+strong {color:#000000;}
+big { font-size:10pt; color:#000000; font-family:'courier new'; }
+
+H1, H2, H3, H4, H5, H6, b {color:#0000FF; font-weight:bold;}
+H1	{font-size:24pt;}
+H2	{font-size:18pt; line-height:115%;}
+H3	{font-size:14pt; line-height:115%;}
+H4	{font-size:12pt;}
+H5	{font-size:10pt; margin-top:25pt; margin-bottom:6pt;}
+H6	{font-size:10pt; margin-top:20pt; margin-bottom:6pt;}
+
+.nL	{text-align:left; margin-top:12pt; margin-bottom:6pt;}		/* align Left */
+.nC	{text-align:center; margin-top:12pt; margin-bottom:6pt;}	/* align Center */
+.nR	{text-align:right; margin-top:12pt; margin-bottom:6pt;}	/* align Right */
+.nS {margin-left:90px; }	/* Sangrado grande */
+.n1	{color:#003388; margin-top:0; margin-bottom:0;}			/* línea 1 espacio */
+.n2	{margin-top:4pt; margin-bottom:0;}						/* línea 2 espacio */
+.kb {background-color:#646464; color:#FFFFFF; padding:0 3px 0 3px; }	/* caracteres del teclado */
+.mn {background-color:#0000BB; color:#FFFFFF; padding:0 3px 0 3px; }	/* opciones de menu */
+
+.nH { padding:1em; width:85%; text-align:left; position:relative; /* Nota histórica */
+    left:60px; border:gray 1px solid; background-color:#eeeeff; }
+.bg0 {background-color:#eeeeff;}			/* Fondo-0 */
+.ibm {color:#6080A8; margin-top:2pt; margin-bottom:0;}
+
+.nmm	{text-align:center; margin-top:0; margin-bottom:0;}	/* Menús sup/inf */
+
+.resY	{background-color:#FFFF99;  border:#000000 0 inset;}	/* resaltado Yellow */
+.resB	{font-weight:bold;  color:#0000FF;}						/* resaltado Blue */
+.resR	{color:#EE0000;}										/* resaltado Red */
+.resC	{font-style:italic; border:#000000 0 inset; color:#000000;}	/* resaltado cita textual */
+
+#footer {background-color:#DDDDFF; text-align:center; padding: 3px 35px 3px 35px; }
+
+/* style='border:1px solid gray' class='bg0'       estilo de borde y fondo de tablas  */
+
+.flo2 {color:#880000; padding:0 10px 0 10px; text-align:center;  /* previo-next */
+	float:right; border:#880000 1px solid; background-color:#eeeeff; }
+
+.goog3 {width:300px; float:right; border:#FFFFFF 1px solid; background-color:#FFFFFF; }
+
+.notN	{		/* Nota normal */
+	margin-left:20pt; text-align:left; margin-top:12pt; margin-bottom:17pt;
+    background-color:#eeeeff; padding:0 10px 0 10px;}
+
+.notC	{		/* Nota Cita */
+	margin-left:90pt; text-align:left; margin-top:17pt; margin-bottom:6pt;}
+
+code {		/* Código in-line */
+	font-family:'courier new', monospace; background-color:#eeeeff; color:#000000; padding:0 3px 0 3px;}
+.code {		/* código aislado */
+	margin-top:0; margin-bottom:0; text-align:left; padding-left:15px;
+	font-family:'courier new', monospace; background-color:#eeeeff; color:#000000;}

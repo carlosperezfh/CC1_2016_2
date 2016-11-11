@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II -->
+<html lang="es" dir="ltr" class="client-js ve-not-available"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Programación en C++/Estructuras II - Wikilibros</title>
+<script>document.documentElement.className = document.documentElement.className.replace( /(^|\s)client-nojs(\s|$)/, "$1client-js$2" );</script>
+<script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Programación_en_C++/Estructuras_II","wgTitle":"Programación en C++/Estructuras II","wgCurRevisionId":304548,"wgRevisionId":304548,"wgArticleId":20049,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Programación en C++"],"wgBreakFrames":false,"wgPageContentLanguage":"es","wgPageContentModel":"wikitext","wgSeparatorTransformTable":[",\t."," \t,"],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],"wgMonthNamesShort":["","ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"],"wgRelevantPageName":"Programación_en_C++/Estructuras_II","wgRelevantArticleId":20049,"wgRequestId":"V2MPVgpAEKkAABMaGYIAAABY","wgIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgWikiEditorEnabledModules":{"toolbar":true,"dialogs":true,"preview":false,"publish":false},"wgBetaFeaturesFeatures":[],"wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgVisualEditor":{"pageLanguageCode":"es","pageLanguageDir":"ltr","usePageImages":false,"usePageDescriptions":true},"wgPreferredVariant":"es","wgULSCurrentAutonym":"español","wgCategoryTreePageCategoryOptions":"{\"mode\":0,\"hideprefix\":20,\"showcount\":true,\"namespaces\":false}","wgNoticeProject":"wikibooks","wgCentralNoticeCategoriesUsingLegacy":["Fundraising","fundraising"],"wgCentralAuthMobileDomain":false,"wgVisualEditorToolbarScrollOffset":0});mw.loader.implement("user.options",function($,jQuery,require,module){mw.user.options.set({"variant":"es"});});mw.loader.implement("user.tokens",function ( $, jQuery, require, module ) {
+mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});/*@nomin*/;
+
+});mw.loader.load(["mediawiki.page.startup","mediawiki.legacy.wikibits","ext.centralauth.centralautologin","ext.visualEditor.desktopArticleTarget.init","ext.uls.init","ext.uls.interface","mw.MediaWikiPlayer.loader","mw.PopUpMediaTransform","ext.centralNotice.bannerController","skins.vector.js"]);});</script>
+<link rel="stylesheet" href="./Programación en C++_Estructuras II - Wikilibros_files/load.php">
+<style>@import url("//es.wikibooks.org/w/index.php?title=MediaWiki:Common.css/Metaplantilla de avisos.css&action=raw&ctype=text/css") screen;@import url(//es.wikibooks.org/w/index.php?title=MediaWiki:Common.css/Messageboxes.css&action=raw&ctype=text/css) screen;@import url(//es.wikibooks.org/w/index.php?title=MediaWiki:Common.css/Fmbox.css&action=raw&ctype=text/css) screen;@import url(//es.wikibooks.org/w/index.php?title=MediaWiki:Common.css/Plantilla_lista_desplegable.css&action=raw&ctype=text/css) screen; h1.firstHeading span.subpagepart{display:block}h1.firstHeading span.subpagepart a,h1.firstHeading span.subpagepart-first a{font-size:smaller} .interProject{display:none;clear:both;border-top:2px dotted #AAAAAA;margin-top:2em} .mw-specialpages-table{text-align:left} ol.references{font-size:100%}.references-small{font-size:90%}.references-2column{font-size:90%} ol.references > li:target,sup.reference:target,cite:target{background-color:#DEF} .corchete-llamada{display:none} @media print{.listaref{-moz-column-count:1 !important}} .mw-tag-markers{font-family:sans-serif;font-style:italic;font-size:90%} body.page-Portada h1.firstHeading,body.page-Portada #catlinks{display:none} .nobuttons input.searchboxSearchButton,.nobuttons input.mw-ui-button{display:none} #mw-hidden-catlinks{font-size:87% !important} .hiddenStructure{display:inline ! important;color:#f00;background-color:#0f0} .headergris{background:url(//upload.wikimedia.org/wikipedia/commons/d/d7/Bookbar2.png) right;background-repeat:no-repeat;margin:0;background-color:#F0F0F0;font-size:120%;font-weight:bold;border:1px solid #a3b0bf;text-align:left;color:#000000;padding:0.2em 0.4em}.headerbleu{background:url(//upload.wikimedia.org/wikipedia/commons/a/a2/Bookbar1.png) right;background-repeat:no-repeat;margin:0;background-color:#F0F0F0;font-size:120%;font-weight:bold;border:1px solid #a3b0bf;text-align:left;color:#000000;padding:0.2em 0.4em}.headergris span.editsection,.headerbleu span.editsection,.headergris a.NavToggle,.headerbleu a.NavToggle{margin-right:100px} .title-shortlink-container{display:none} .ombreig img{box-shadow:0 3px 4px #000; box-shadow:0 3px 4px rgba(0,0,0,0.45);margin-bottom:7px;background:rgb(255,255,255); background:rgba(0,0,0,0.02);-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px} .ombreig p{margin:0}table.prettytable,table.bellataula{margin:1em 1em 1em 0;background:#f9f9f9;border:1px #aaaaaa solid;border-collapse:collapse}table.prettytable th,table.prettytable td,table.bellataula th,table.bellataula td{border:1px #aaaaaa solid;padding:0.2em}table.bellataula th,table.prettytable th{background:#f2f2f2;text-align:center}table.bellataula caption,table.prettytable caption{margin-left:inherit;margin-right:inherit}table.centre,table.center{ margin:1em auto}table.wikitable[align=center]{margin:1em auto}</style><style>
+#container{position:relative;min-height:100%}#container,video{width:100%;height:100%}#playerContainer{overflow:hidden;position:relative;height:100%;background:#000}#videoHolder{position:relative;overflow:hidden}.fullscreen #playerContainer{position:absolute !important;width:100% !important;height:100%! important;z-index:9999;min-height:100%;top:0;left:0;margin:0}.mwEmbedPlayer{width:100%;height:100%;overflow:hidden;position:absolute;top:0;left:0}.modal_editor{ left:10px;top:10px;right:10px;bottom:10px;position:fixed;z-index:100}.displayHTML a:visited{color:white}.loadingSpinner{width:32px;height:32px;display:block;padding:0px;background-image:url(/w/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/loading_ani.gif?a51c5)}.mw-imported-resource{border:thin solid black}.kaltura-icon{background-image:url(/w/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/kaltura_logo_sm_transparent.png?fa5c4) !important;background-repeat:no-repeat;display:block;height:12px;width:12px;margin-top:2px !important;margin-left:3px !important}.mw-fullscreen-overlay{background:rgb(0,0,0) none repeat scroll 0% 0%;position:fixed;top:0pt;left:0pt;width:100%;height:100%;-moz-background-clip:border;-moz-background-origin:padding;-moz-background-inline-policy:continuous} .play-btn-large{width:70px;height:53px;background :url(/w/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/player_big_play_button.png?69699);position :absolute;cursor :pointer;border :none !important; }.play-btn-large:hover{background :url(/w/extensions/MwEmbedSupport/MwEmbedModules/MwEmbedSupport/skins/common/images/player_big_play_button_hover.png?97c2a)}.carouselContainer{position :absolute;width :100%;z-index :2}.carouselVideoTitle{position :absolute;top :0px;left :0px;width :100%;background :rgba(0,0,0,0.8);color :white;font-size :small;font-weight :bold;z-index :2}.carouselVideoTitleText{display :block;padding :10px 10px 10px 20px}.carouselTitleDuration{position :absolute;top :0px;right :0px;padding :2px;background-color :#5A5A5A;color :#D9D9D9;font-size :smaller;z-index :2}.carouselImgTitle{position :absolute;width :100%;text-align :center;color :white;font-size :small;background :rgba(0,0,0,0.4)}.carouselImgDuration{position :absolute;top :2px;left :2px;background :rgba( 0,0,0,0.7 );color :white;padding :1px 6px;font-size :small}.carouselPrevButton,.carouselNextButton{display :block;position :absolute;bottom:23px}.carouselPrevButton{left :5px}.carouselNextButton{right:6px}.alert-container{border-radius:3px;background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0.04,rgb(215,215,215)),color-stop(0.55,rgb(230,230,230)),color-stop(1,rgb(255,255,255)));background-image:-o-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-ms-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-moz-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:-webkit-linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);background-image:linear-gradient(bottom,rgb(215,215,215) 4%,rgb(230,230,230) 55%,rgb(255,255,255) 100%);margin:auto;position:absolute;top:0;left:0;right:0;bottom:0;max-width:80%;max-height:30%}.alert-title{background-color :#E6E6E6;padding :5px;border-bottom :1px solid #D1D1D1;font-weight :normal !important;font-size:14px !important;border-top-left-radius:3px;border-top-right-radius:3px }.alert-message{padding :5px;font-weight :normal !important;text-align:center;font-size:14px !important}.alert-buttons-container{text-align:center;padding-bottom:5px}.alert-button{background-color:#474747;color:white;border-radius:.5em;padding:2px 10px;background-image:-webkit-gradient( linear,left bottom,left top,color-stop(0.04,rgb(25,25,25)),color-stop(0.55,rgb(47,47,47)),color-stop(0.68,rgb(71,71,71)) );background-image:-o-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-moz-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-ms-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:-webkit-linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%);background-image:linear-gradient(bottom,rgb(25,25,25) 4%,rgb(47,47,47) 55%,rgb(71,71,71) 68%)}.alert-text{color :black !important}
+.PopUpMediaTransform a .play-btn-large{top:50%;left :50%;width:70px;height:53px;margin-left:-35px;margin-top:-25px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAA1CAYAAAD8mJ3rAAADNklEQVR4AWJAAhxA7AHEeUDcP8JwHtTvHAxoQAuI5wDxZkD75qBkSRKG0bZt21h7t23btm2bO7ZthNq2rq3mo0zWeKaty6yI8wB1Et+fEnDuIC4+SdEGvIBSPvP6oxOhYihjG8WImHtQxDaAk52GEeQFT4uBYqAYKAaKUVNTG9bX1x+FYj4iLi4+UFVVRXjz5s0Wwo0bN1geHh7zAi8mKSkJ9fLly63vOX/+POO3336bElgx////P/3Fixdbu9HS0kKxsLAYFzgxZ8+eZTx9+nRzP8rKygh6enqjAiOmt7eX/ujRo82DcP/+/fWsrCyskpLSEN+L6e7upoMf3jgMt27dWouKilqRkZEZ5FsxHR0dtDt37qwfhUuXLrG8vb0XxMTEBvhODJhcaSCi149DZ2cn3cHBYZavxDQ2NlKvXLmydhLU19dTfvjhhym+EFNXV0e5ePHi6klSVFREMDIyGuNpMdXV1WQQ2azTIDU1FaOpqTnCk2IqKirIPT09zNOiq6uLARIMpaCgMMhTYkpLS0kgmZinDZjk6SDBFiUlJQd4QkxhYSGxra2Nzi7AgpVibm4+zvVi8vLyiE1NTXR2gshBeg5Xi8nOziaAZKKxG7AwneBqMZmZmQSQTFR2o6OjM8LVYkCk4svLyynsJCYmBs31c0xycjKupKSEwg5A4Ud2c3NbkJCQGOB6MfHx8diCggLyaePr67ukqKg4xDN1DOjWWJBMpNMiODgYtb365QExoCrFgs0n4kkTHh6OBqcOYzy7VoqIiMCkp6cTT4ro6GgsKOAmeH51HRYWhgbJRDgusbGxODs7uylhYeF+vth2CAkJQYNkIhwVRMgvv/wyg5xP8dVGVVBQECoxMRF/WECa4f7666+57aU9n4gJCAhAIT95GBwcHObl5OQG+fqUwN/fH4UMh4Pg7u6+pKqqOsx+AVwqxsfHZ0VLS2tUoE4ikV6wm5DAwECUsbHxuECeXevq6o59LwREOMbKympyW/QKkhgEZJi4uLgsIr0H1CLT+0QvvFEFxUAxUAwUA8Xs+pYAviUohSK2UfrpvdJrKOMzbz86ef/9AIfU5yH0AyJklzeR8E3kO5B6nR5s2Y8qAAAAAElFTkSuQmCC);background-image:url(/w/extensions/TimedMediaHandler/resources/player_big_play_button.png?f49a4)!ie}.PopUpMediaTransform a .play-btn-large :hover{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAA1CAYAAAD8mJ3rAAADSklEQVR4AeybA4wlWRRA1/u1tjG2g3YHY0/U4djTtm3btm3bTtu27du2WVXvJif8PIV3Ue+jBUECrgPsgAbBYAeuTzlYEicBU8CH4JhOuZiJ3wBHJGUOlyknEJxIxlLACYQ5ErEMcLLSZYRwRGKQGCQGicG0mP/++y/4/Pnz4UjMDCQSyQ+ianR0dGyS6urqbnZ29nTCi9HR0SkYHBwcW0peXl7Ho0ePEggrJisrq62/v390NWJjYxsZGRmjCCcmJyeno7u7e2Q9PDw8qs6ePRtOGDEZGRntEMMbobm5edDCwqLsjz/+CMK9mNTU1Db4w0Oboaampk9BQSH/22+/DcCtmMTExNb6+vrBrVBYWNjNzc2d+eWXX/rhTkx0dHRLZWXlwHZISkpqe/LkSSquxISHhzeXlJT07QShoaFNN2/ejMeFmODg4KaCgoLencTZ2bn68uXLEZgW4+/v3wBLdvduYGBgUHL06NFQTIrx9vauT09P79otUlJSOhQVFQt++eWXQEyJcXNzq4OVqXO3iYqKaoMVLJtGo/ljQoyjo2MtpP3tewUUrE0MDAzRB16MjY1NDaxMbXuJr69vE5VK9T/QYiDFrw4KCmrda6AwjTnQYkxMTKrg9G7ea06ePBl2oMXAklrp6enZtJcoKSkVY6FRVeHi4tK4F8CNvuHNmzdZFArF/8CLUVdXL7O3t6/fbXh4eHJ//fXXIMzkMcrKyqXW1tZ1u4WoqGjBkSNHQjGX+crLy5eamZnV7jTS0tLF586di8RsrSQjI1NiZGRUs1NA+l9KT08fg/nqWlJSslhfX796u6ioqJRfu3Yt/pNPPvHFRdtBTEysSFtbu2qrgJCKe/fuJZPJZH9cNapEREQKNTU1KzeLmppaBRsbW9qyohAvYgQFBQsm/+RmgDZmxo8//hiI6ykBPz9/weTlsBHevn2b+88//4TMvZ/oYri5ufOPHz8eTqhJ5Lt373JWEyIsLFx45cqVaELOrk+fPh0J2W/5QiGwhJewsrLGzS29RBQzyeRl8vLly+zJswdykUQSieSPHhxaHSQGiUFikBgkBu0lWH0vATcSsQzu2f1KLkjGHG4TA4cJFOjBs9RoFtIDBQiOPZGjeyIBuiuBC06Nbn0AAAAASUVORK5CYII=);background-image:url(/w/extensions/TimedMediaHandler/resources/player_big_play_button_hover.png?8a926)!ie} .mw-tmh-playtext{display:block;height:0;overflow:hidden}
+@media print{#centralNotice{display:none}}.cn-closeButton{display:inline-block;zoom:1;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAACeklEQVR4Aa1UM3jkcRBN6qS//tTFttPHqmI359VZ5dm2L1zFtr02YlRx5sX2ft/7ed7O/w1M5ufnt8NZQjCBQXhG+IYZe5zjfju7xcHc3NzEzMwM6xOEqNnZ2ZeVlZW827dv1ycmJnbGx8d3Yr5582Z9eXk5D/d4h/empqYm+K0nw3yKcF4sFmdzOJzGgIAAhb29vc7Ozk6/Atrr/fz8lCwWq6m3tzcb72G3nmzFo/NNTU354eHhIltbW72Tk5M2IyND9P79+8ZPnz7VvXnzpoHBYPS4uLhobGxsDMHBwaLa2tp82MF+PVmUUqnMioiI6LOysjLQLCcPS2ZmZn7Ozc39oPtFYG80GgWpqakSS0tLY1hYmEgikWTBfoXsLD16BT3gUWhoqEKtVheREZ+Qu0IEjI+PZ2k0GqFer+cnJSWJra2tDWw2u2FqauoVeEAW3NzcnBcYGCh3dHTUtba2ltNjLvRJSEiQEQEPRENDQzkMBqPXwsKiXyqVFsFDNzc3LWmoqKmp4YIHZIyHDx9WOzg46GJiYmTk5e/h4eHstLQ0CX2ykXST4JPJ8y7sSVM5/QGMf9y4caMHf3r//v1a8IDsGRm04/D58+dtpNFPPNRqtflXrlzpI8G15IEGc2xsrFSlUglwD+Tk5NRBmuTk5A7wgOxbXFxcF8iysrIa1mskEolKvL29Ne7u7mpXV1dNaWlp9fr7X79+VYMMeQieY/dsv5p1r2g2Nja2vWZ7RXNiYuIA0dwlzwYGBjbkGXmURXeLeUa1ul2ebV8BEH+7CiAiASTYvgJ2qc3MzMzF2vz8+XPd27dvG5hMZg+CsV1tHmfXOP5+dqyddgHOI7v1srTdcwAAAABJRU5ErkJggg==);background:url(/w/extensions/CentralNotice/resources/subscribing/CloseWindow19x19.png?7596b)!ie;width:19px;height:19px;text-indent:19px;white-space:nowrap;overflow:hidden}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	#toc.tochidden,.toctoggle{display:none}}
+.title-shortlink{font-size:small;margin:0}
+.mw-collapsible-toggle{float:right;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}  .mw-content-ltr .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr .mw-collapsible-toggle{float:right} .mw-content-rtl .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl .mw-collapsible-toggle{float:left}.mw-customtoggle,.mw-collapsible-toggle{cursor:pointer} caption .mw-collapsible-toggle,.mw-content-ltr caption .mw-collapsible-toggle,.mw-content-rtl caption .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr caption .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl caption .mw-collapsible-toggle{float:none} li .mw-collapsible-toggle,.mw-content-ltr li .mw-collapsible-toggle,.mw-content-rtl li .mw-collapsible-toggle,.mw-content-rtl .mw-content-ltr li .mw-collapsible-toggle,.mw-content-ltr .mw-content-rtl li .mw-collapsible-toggle{float:none} .mw-collapsible-toggle-li{list-style:none}
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:none;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:solid 1px #aaa;padding:0;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:solid 1px #aaa;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#4c59a6;color:#fff}.suggestions-special .special-label{color:#808080;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c0c0c0}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+#p-lang .uls-settings-trigger{background:transparent no-repeat right top;background-image:url(/w/extensions/UniversalLanguageSelector/resources/images/cog-sprite.png?30312);background-image:linear-gradient(transparent,transparent),url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2214%22%20height%3D%2232%22%3E%3Cdefs%3E%3Cpath%20d%3D%22M14%209.3V6.73l-1.575-.264c-.117-.44-.292-.848-.496-1.2l.93-1.285-1.81-1.84-1.31.908c-.38-.205-.79-.38-1.196-.497L8.284%201H5.716l-.263%201.578c-.437.117-.816.293-1.196.497L2.975%202.17%201.137%203.98l.934%201.287c-.2.38-.376.79-.493%201.228L0%206.73V9.3l1.575.264c.117.438.292.818.496%201.198l-.93%201.315L2.95%2013.89l1.312-.938c.38.205.787.38%201.224.497L5.746%2015h2.566l.263-1.578c.408-.117.817-.293%201.196-.497l1.315.935%201.81-1.812-.935-1.315c.203-.38.38-.76.495-1.2L14%209.303zm-7%201.404c-1.488%200-2.683-1.2-2.683-2.69S5.542%205.327%207%205.327c1.458%200%202.683%201.198%202.683%202.69%200%201.49-1.195%202.688-2.683%202.688z%22%20id%3D%22a%22%2F%3E%3C%2Fdefs%3E%3Cuse%20xlink%3Ahref%3D%22%23a%22%20fill%3D%22%23808080%22%2F%3E%3Cuse%20transform%3D%22translate%280%2016%29%22%20xlink%3Ahref%3D%22%23a%22%20fill%3D%22%23555%22%2F%3E%3C%2Fsvg%3E%0A);background-image:linear-gradient(transparent,transparent),url(/w/extensions/UniversalLanguageSelector/resources/images/cog-sprite.svg?624e4)!ie;background-image:-o-linear-gradient(transparent,transparent),url(/w/extensions/UniversalLanguageSelector/resources/images/cog-sprite.png?30312);height:16px;width:14px;float:right;cursor:pointer}.skin-vector #p-lang .uls-settings-trigger{ margin-top:3px}#p-lang .uls-settings-trigger:hover{background-position:right -16px}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;-o-text-overflow:ellipsis; text-overflow:ellipsis;white-space:nowrap}</style><style>
+.uls-menu{border-radius:4px; font-size:medium}.uls-search,.uls-language-settings-close-block{border-top-right-radius:4px;border-top-left-radius:4px}.uls-language-list{border-bottom-right-radius:4px;border-bottom-left-radius:4px}.uls-menu.callout .caret-before,.uls-menu.callout .caret-after{border-top:10px solid transparent;border-right:10px solid #c9c9c9;border-bottom:10px solid transparent;display:inline-block;left:-11px; top:17px;position:absolute}.uls-menu.callout .caret-after{border-right:10px solid #fcfcfc;display:inline-block;left:-10px}.uls-menu.callout--languageselection .caret-after{border-right:10px solid #fff}.uls-ui-languages button{margin:5px 15px 5px 0;white-space:nowrap;overflow:hidden}.uls-search-wrapper-wrapper{position:relative;padding-left:40px;margin-top:5px;margin-bottom:5px}.uls-icon-back{background:transparent url(/w/extensions/UniversalLanguageSelector/resources/images/back-grey-ltr.png?90e9b) no-repeat scroll center center;background-image:-webkit-linear-gradient( transparent,transparent ),url(/w/extensions/UniversalLanguageSelector/resources/images/back-grey-ltr.svg?ae714);background-image:linear-gradient( transparent,transparent ),url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%20standalone%3D%22no%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20id%3D%22Layer_1%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M7%2013.1l8.9%208.9c.8-.8.8-2%200-2.8l-6.1-6.1%206-6.1c.8-.8.8-2%200-2.8L7%2013.1z%22%20id%3D%22path3%22%20fill%3D%22%23555%22%2F%3E%0A%3C%2Fsvg%3E%0A);background-image:linear-gradient( transparent,transparent ),url(/w/extensions/UniversalLanguageSelector/resources/images/back-grey-ltr.svg?ae714)!ie;background-size:28px;background-position:center center;height:32px;width:40px;display:block;position:absolute;left:0;border-right:1px solid #c9c9c9;opacity:0.8}.uls-icon-back:hover{opacity:1;cursor:pointer}
+.postedit-container{margin:0 auto;position:fixed;top:0;height:0;left:50%;z-index:1000;font-size:13px}.postedit-container:hover{cursor:pointer}.postedit{position:relative;top:0.6em;left:-50%;padding:.6em 3.6em .6em 1.1em;line-height:1.5625em;color:#626465;background-color:#f4f4f4;border:1px solid #dcd9d9;text-shadow:0 0.0625em 0 rgba( 255,255,255,0.5 );border-radius:5px;box-shadow:0 2px 5px 0 #ccc;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-ms-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out}.skin-monobook .postedit{top:6em !important}.postedit-faded{opacity:0}.postedit-icon{padding-left:41px;  line-height:25px;background-repeat:no-repeat;background-position:8px 50%}.postedit-icon-checkmark{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB9ElEQVR4AZWRA3AYURQArxrVHtW2bdu2bdu2zdi2bdu2bWxs7zeehZaw4f70kbs+zI3e/nWK+RWx3aOFlrL56Sy5SxrruG69hlv6OyK+mz+8KDSXdXembj0ispT7tjs4ZTIbpYBvxGSGKzZTeFrb7W/meN002swFs0U8ttpHTkF2BvCqWQrW35929bTsKm5Zb+SEwWwcY8wAngB9m7Z+d+rIPZ/npdy12M5p47n8dXsCYAf0qPy06eGMdktuDu9Qf+JmKl3SWM91qzVcN9tAbEYkwMaq0tyb1m/To5kP170el/BK8/qa6sJr70ydf+T/Uu5ab+Oo/lS0AkUBpIFWlZ9WPhxpse/PHO7YbOOczjL0vZV2lNxPPtG73dYXM+xvm2znrOl83tidoqCwMBgYXsPFB0on5S6pr+eK5TKuW67lgvaKvF8mL1dtfTL32FHxRdyx3cQpg7m4x9sCXKkTIzA4LDH44zWdzaUf71hv5rTG4uyzcusybxSX7aThbMQ8XgCYAp3rzTTQOiIh9PNlzY3FSuZxrzjme1Y7uGS6kjsWO4jPjM4FVjRZsvD4kO9XtTZzQn82NyzWc0B7AmZh6gA/hOYSGhfw9YbOVnarj+S7800AL2BIsxUAbWNToj7bhBuQmZcOsFdoKUC74rGheCwXmqAIQTc9jQcrADIAAAAASUVORK5CYII=);background-image:url(/w/resources/src/mediawiki.action/images/green-checkmark.png?d94f1)!ie;background-position:left}.postedit-close{position:absolute;padding:0 .8em;right:0;top:0;font-size:1.25em;font-weight:bold;line-height:2.3em;color:#000;text-shadow:0 0.0625em 0 #fff;text-decoration:none;opacity:0.2;filter:alpha( opacity=20 )}.postedit-close:hover{color:#000;text-decoration:none;opacity:0.4;filter:alpha( opacity=40 )}
+@-webkit-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-webkit-transform:translateY(-20px)}100%{opacity:1;-webkit-transform:translateY(0)}}@-moz-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-moz-transform:translateY(-20px)}100%{opacity:1;-moz-transform:translateY(0)}}@-o-keyframes centralAuthPPersonalAnimation{0%{opacity:0;-o-transform:translateY(-20px)}100%{opacity:1;-o-transform:translateY(0)}}@keyframes centralAuthPPersonalAnimation{0%{opacity:0;transform:translateY(-20px)}100%{opacity:1;transform:translateY(0)}}.centralAuthPPersonalAnimation{-webkit-animation-duration:1s;-moz-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-name:centralAuthPPersonalAnimation;-moz-animation-name:centralAuthPPersonalAnimation;-o-animation-name:centralAuthPPersonalAnimation;animation-name:centralAuthPPersonalAnimation}</style><style>
+.ve-activated #toc,.ve-activated #siteNotice,.ve-activated .mw-indicators,.ve-activated #t-print,.ve-activated #t-permalink,.ve-activated #p-coll-print_export,.ve-activated #t-cite,.ve-deactivating .ve-ui-surface,.ve-active .ve-init-mw-desktopArticleTarget-editableContent{display:none} .ve-activating .ve-ui-surface{height:0;padding:0 !important; overflow:hidden} .ve-loading #content > :not( .ve-init-mw-desktopArticleTarget-loading-overlay ), .ve-activated .ve-init-mw-desktopArticleTarget-uneditableContent{  opacity:0.5;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none; } .ve-activated #content{position:relative} .ve-init-mw-desktopArticleTarget-loading-overlay{position:absolute;left:0;right:0;z-index:1;margin-top:-0.5em}.ve-init-mw-desktopArticleTarget-progress{height:1em;overflow:hidden;margin:0 25%}.ve-init-mw-desktopArticleTarget-progress-bar{height:1em;width:0} .mw-editsection{white-space:nowrap; unicode-bidi:-moz-isolate;unicode-bidi:-webkit-isolate;unicode-bidi:isolate}.mw-editsection-divider{color:#555} .ve-init-mw-desktopArticleTarget-progress{height:0.75em;border:1px solid #347bff;background:#fff;border-radius:2px;box-shadow:0 0.1em 0 0 rgba( 0,0,0,0.15 )}.ve-init-mw-desktopArticleTarget-progress-bar{height:0.75em;background:#347bff}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="./Programación en C++_Estructuras II - Wikilibros_files/load(1).php">
+<script async="" src="./Programación en C++_Estructuras II - Wikilibros_files/load(2).php"></script>
+<meta name="generator" content="MediaWiki 1.28.0-wmf.6">
+<meta name="referrer" content="origin-when-cross-origin">
+<link rel="alternate" type="application/x-wiki" title="editar" href="https://es.wikibooks.org/w/index.php?title=Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;action=edit">
+<link rel="edit" title="editar" href="https://es.wikibooks.org/w/index.php?title=Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;action=edit">
+<link rel="shortcut icon" href="https://es.wikibooks.org/static/favicon/wikibooks.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="https://es.wikibooks.org/w/opensearch_desc.php" title="Wikilibros (es)">
+<link rel="EditURI" type="application/rsd+xml" href="https://es.wikibooks.org/w/api.php?action=rsd">
+<link rel="copyright" href="https://creativecommons.org/licenses/by-sa/3.0/">
+<link rel="alternate" type="application/atom+xml" title="Canal Atom de Wikilibros" href="https://es.wikibooks.org/w/index.php?title=Especial:CambiosRecientes&amp;feed=atom">
+<link rel="canonical" href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II">
+<link rel="dns-prefetch" href="https://login.wikimedia.org/">
+<link rel="dns-prefetch" href="https://meta.wikimedia.org/">
+<script src="./Programación en C++_Estructuras II - Wikilibros_files/load(3).php"></script></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Programación_en_C_Estructuras_II rootpage-Programación_en_C skin-vector action-view">
+		<div id="mw-page-base" class="noprint"></div>
+		<div id="mw-head-base" class="noprint"></div>
+		<div id="content" class="mw-body" role="main">
+			<a id="top"></a>
+
+							<div id="siteNotice"><div id="centralNotice"></div><!-- CentralNotice --></div>
+						<div class="mw-indicators">
+</div>
+			<h1 id="firstHeading" class="firstHeading" lang="es">Programación en C++/Estructuras II<div class="title-shortlink-container"><a class="title-shortlink" href="https://es.wikibooks.org/s/7co">https://es.wikibooks.org/s/7co</a></div></h1>
+									<div id="bodyContent" class="mw-body-content">
+									<div id="siteSub">De Wikilibros, la colección de libros de texto de contenido libre.</div>
+								<div id="contentSub"><span class="subpages">&lt; <a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B" title="Programación en C++">Programación en C++</a></span></div>
+												<div id="jump-to-nav" class="mw-jump">
+					Saltar a:					<a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II#mw-head">navegación</a>, 					<a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II#p-search">buscar</a>
+				</div>
+				<div id="mw-content-text" lang="es" dir="ltr" class="mw-content-ltr"><p>Editores:<br>
+<a rel="nofollow" class="external text" href="mailto:oscarpalacios1@yahoo.com.mx">Oscar E. Palacios</a></p>
+<table align="center" cellpadding="12">
+<tbody><tr>
+<td>← <a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Punteros" title="Programación en C++/Punteros">Punteros</a></td>
+<td><a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Plantillas" title="Programación en C++/Plantillas">Plantillas</a> →</td>
+</tr>
+</tbody></table>
+<p></p>
+<div id="toc" class="toc">
+<div id="toctitle">
+<h2>Contenido</h2>
+<span class="toctoggle">&nbsp;[<a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II#" id="togglelink">ocultar</a>]&nbsp;</span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II#Introducci.C3.B3n"><span class="tocnumber">1</span> <span class="toctext">Introducción</span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II#Pilas_o_Stacks"><span class="tocnumber">1.1</span> <span class="toctext">Pilas o Stacks</span></a>
+<ul>
+<li class="toclevel-3 tocsection-3"><a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II#Pila_en_arreglo_est.C3.A1tico"><span class="tocnumber">1.1.1</span> <span class="toctext">Pila en arreglo estático</span></a></li>
+<li class="toclevel-3 tocsection-4"><a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II#Pila_din.C3.A1mica"><span class="tocnumber">1.1.2</span> <span class="toctext">Pila dinámica</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-5"><a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II#Colas_o_Queues"><span class="tocnumber">1.2</span> <span class="toctext">Colas o Queues</span></a>
+<ul>
+<li class="toclevel-3 tocsection-6"><a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II#Cola_en_un_arreglo_est.C3.A1tico"><span class="tocnumber">1.2.1</span> <span class="toctext">Cola en un arreglo estático</span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-7"><a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II#Colas_de_doble_enlace"><span class="tocnumber">1.3</span> <span class="toctext">Colas de doble enlace</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p></p>
+<h1><span class="mw-headline" id="Introducci.C3.B3n">Introducción</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://es.wikibooks.org/w/index.php?title=Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;action=edit&amp;section=1" title="Editar sección: Introducción">editar</a><span class="mw-editsection-bracket">]</span></span></h1>
+<div style="background:#fffeee; text-align:justify; padding:40px">
+<p>Algunos autores comienzan por definir los conceptos de estructura de datos a raiz de estructuras conocidas como <b>listas</b>. En el mismo contexto, suele suceder que a dichas listas también se les conoce como secuencias y/o colecciones de datos. Hay que decir que dichos autores están (en parte) en lo correcto, ya que una lista (de cualquier tipo) es una estructura ideada con el propósito de albergar datos agrupados bajo un mismo nombre. Al respecto, podemos pensar que las listas son como arreglos de datos, es decir, para hacer una introducción al manejo y programación de <b>listas encadenadas</b> podemos tomar como punto de partida a los arreglos estáticos. Es así como en esta seccción se descubrirá la forma de operación de tres tipos comúnes de listas conocidas como: <b>PILAS</b>, <b>COLAS</b> Y <b>DOBLE COLA</b> (<b>STACK</b>, <b>QUEUE</b>, <b>DQUEUE</b>). En programación, el uso de listas es una práctica tan extendida que lenguajes tales como (por ejemplo) Java, Python y C++ soportan los mecanismos necesarios para trabajar con estructuras de: Vectores, Pilas, Colas, Listas, etc. En C++, los programadores que usen Dev-Cpp ( <a rel="nofollow" class="external text" href="http://www.bloodshed.net/devcpp.html">Bloodshed.software -Dev-C++</a> ) pueden aprovechar las ventajas que ofrecen las STL (Standard Templates Libraries) dentro de la cual se pueden encontrar plantillas para la manipulación de listas tales como: Vectores, Listas, Sets, Maps, etc. Por otro lado, los usuarios de Borland C++ ( <a rel="nofollow" class="external text" href="http://dn.codegear.com/article/21751">Turbo C++ version 1.01</a> ) pueden hacer uso de la CLASSLIB, misma que posee las librerias para los propósitos mencionados.</p>
+<p><br>
+<font size="+2">Nota:</font> En las siguientes secciones se presentarán seis programas, tres para simular listas basadas en arreglos estáticos y tres para simular listas por medio de enlaces dinámicos (punteros). En cuanto al material incluido se debe hacer las siguientes declaraciones:</p>
+<ol>
+<li>Puesto que el material es puramente didáctico, cada programa se escribe en un mismo archivo. La idea es no perder de vista el objetivo. Los entendidos sabrán que normalmente se deben escribir archivos de cabecera, archivos de implementacion y archivos de prueba por separado.</li>
+<li>Para cada una de las clases creadas en los programas se han elegido nombres en ingles. La idea es que gran parte de la documentación e implementación referente a listas está en dicho idioma, así, se le da al estudiante la idea básica de como operar con las librerías soportadas por los compiladores Dev-Cpp, Borlan C++, y otros.</li>
+<li>Igual, se debe observar que los métodos de las clases tienen nombres en ingles, y que con el objetivo de establecer cierta estandarización todas las clases poseen los mismos métodos, aunque cada una de ellas implementa los mismos a su manera.</li>
+</ol>
+<h2><span class="mw-headline" id="Pilas_o_Stacks">Pilas o Stacks</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://es.wikibooks.org/w/index.php?title=Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;action=edit&amp;section=2" title="Editar sección: Pilas o Stacks">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>Una PILA es una estructuras en donde cada elemento es insertado y retirado
+del tope de la  misma, y debido a esto el comportamiento de un una pila se
+conoce como LIFO (último en entrar, primero en salir ).
+</pre>
+<p>Un ejemplo de pila o stack se puede observar en el mismo procesador, es decir, cada vez que en los programas aparece una llamada a una función el microprocesador guarda el estado de ciertos registros en un segmento de memoria conocido como <b>Stack Segment</b>, mismos que serán recuperados al regreso de la función.</p>
+<h3><span class="mw-headline" id="Pila_en_arreglo_est.C3.A1tico">Pila en arreglo estático</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://es.wikibooks.org/w/index.php?title=Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;action=edit&amp;section=3" title="Editar sección: Pila en arreglo estático">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>En el programa que se verá en seguida, se simula el comportamiento de una estructura de pila. Aunque en el mismo se usa un arreglo estático de tamaño fijo se debe mencionar que normalmente las implementaciones hechas por fabricantes y/o terceras personas se basan en listas dinámicas o enlazadas.</p>
+<p>Para la implementación de la clase Stack se han elegido los métodos:</p>
+<pre>put(),   poner un elemento en la pila
+get(),   retirar un elemento de la pila
+empty(), regresa 1 (TRUE) si la pila esta vacia
+size(),  número de elementos en la pila
+</pre>
+<pre>El atributo SP de la clase Stack es el puntero de lectura/escritura, es decir, el SP
+indica la posición dentro de la pila en donde la función put() insertará el siguiente
+dato, y la posición dentro de la pila de donde la función get() leerá el siguiente dato.
+</pre>
+<pre>Cada vez que put() inserta un elemento el SP se decrementa.
+Cada vez que get() retira un elemento el SP se incrementa.
+</pre>
+<p><br>
+En el siguente ejemplo se analiza lo que sucede con el SP (puntero de pila) cuando se guardan en la pila uno por uno los caracteres 'A', 'B', 'C' y 'D'. Observe que al principio el SP es igual al tamaño de la pila.</p>
+<p><br>
+Llenando la pila.</p>
+<pre>                  SP
+                  |
++---+---+---+---+---+
+|   |   |   |   |   |    al principio (lista vacia)
++---+---+---+---+---+
+</pre>
+<pre>              SP
+              |
++---+---+---+---+---+    push('A');
+|   |   |   |   | A |    después de haber agregado el primer elemento
++---+---+---+---+---+
+</pre>
+<p>...</p>
+<pre>  SP
+  |
++---+---+---+---+---+
+|   | D | C | B | A |    después de haber agregado cuatro elementos
++---+---+---+---+---+
+</pre>
+<p><br>
+Vaciando la pila.</p>
+<pre>      SP
+      |
++---+---+---+---+---+    pop();
+|   | D | C | B | A |    después de haber retirado un elemento
++---+---+---+---+---+
+</pre>
+<p>...</p>
+<pre>                  SP
+                  |
++---+---+---+---+---+
+|   | D | C | B | A |    después de haber retirado todos los elementos
++---+---+---+---+---+
+</pre>
+<pre><b>Nota</b>: observe que al final la lista está vacia, y que dicho estado se debe a que
+el puntero  está al final de la pila y no al hecho de borrar físicamente cada elemento
+de la pila.
+</pre>
+<p><br>
+<font color="red" size="+1">Ejemplo: Pila basada en un arreglo estático</font></p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+ 
+<span class="cp">#define STACK_SIZE 256 </span><span class="cm">/* capacidad máxima */</span>
+<span class="k">typedef</span> <span class="kt">char</span> <span class="n">arreglo</span><span class="p">[</span><span class="n">STACK_SIZE</span><span class="p">];</span>
+ 
+<span class="k">class</span> <span class="nc">Stack</span> <span class="p">{</span>
+	 
+	<span class="kt">int</span> <span class="n">sp</span><span class="p">;</span> <span class="cm">/* puntero de lectura/escritura */</span>
+	<span class="kt">int</span> <span class="n">items</span><span class="p">;</span> <span class="cm">/* número de elementos en lista */</span>
+	<span class="kt">int</span> <span class="n">itemsize</span><span class="p">;</span> <span class="cm">/* tamaño del elemento */</span>
+	<span class="n">arreglo</span> <span class="n">pila</span><span class="p">;</span>	 <span class="cm">/* el arreglo */</span>
+	 
+	<span class="k">public</span><span class="o">:</span>
+		<span class="c1">// constructor</span>
+		<span class="n">Stack</span><span class="p">()</span> <span class="p">{</span>
+			<span class="n">sp</span> <span class="o">=</span> <span class="n">STACK_SIZE</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+			<span class="n">items</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+			<span class="n">itemsize</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+		 <span class="p">}</span>
+	 
+		<span class="c1">// destructor</span>
+		<span class="o">~</span><span class="n">Stack</span><span class="p">()</span> <span class="p">{};</span>
+	 
+	<span class="cm">/* regresa el número de elementos en lista */</span>
+	<span class="kt">int</span> <span class="nf">size</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">items</span><span class="p">;</span> <span class="p">}</span>
+	 
+	<span class="cm">/* regresa 1 si no hay elementos en la lista, o sea, si la lista está vacia */</span>
+	<span class="kt">int</span> <span class="nf">empty</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">items</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+	 
+	<span class="cm">/* insertar elemento a la lista */</span>
+	<span class="kt">int</span> <span class="nf">put</span><span class="p">(</span><span class="kt">char</span> <span class="n">d</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span> <span class="n">sp</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+			<span class="n">pila</span><span class="p">[</span><span class="n">sp</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">;</span>
+			<span class="n">sp</span> <span class="o">--</span><span class="p">;</span>
+			<span class="n">items</span> <span class="o">++</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">return</span> <span class="n">d</span><span class="p">;</span>
+	<span class="p">}</span>
+	 
+	<span class="cm">/* retirar elemento de la lista */</span>
+	<span class="kt">int</span> <span class="nf">get</span><span class="p">()</span>
+	<span class="p">{</span>
+		<span class="k">if</span> <span class="p">(</span> <span class="o">!</span> <span class="n">empty</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
+			<span class="n">sp</span> <span class="o">++</span><span class="p">;</span>
+			<span class="n">items</span> <span class="o">--</span><span class="p">;</span>
+		<span class="p">}</span>
+		<span class="k">return</span> <span class="n">pila</span><span class="p">[</span><span class="n">sp</span><span class="p">];</span>
+	<span class="p">}</span>
+	 
+<span class="p">};</span> <span class="c1">// fin de clase Stack</span>
+ 
+ 
+<span class="c1">// probando la pila. </span>
+<span class="c1">// Nota: obseve cómo los elementos se ingresan en orden desde la A hasta la Z,</span>
+<span class="c1">// y como los mismos se recuperán en orden inverso.</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">d</span><span class="p">;</span>
+    <span class="n">Stack</span> <span class="n">s</span><span class="p">;</span>  <span class="c1">// s es un objeto (instancia) de la clase Stack</span>
+ 
+    <span class="c1">// llenando la pila</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="sc">'A'</span><span class="p">;</span> <span class="n">d</span><span class="o">&lt;=</span><span class="sc">'Z'</span><span class="p">;</span> <span class="n">d</span><span class="o">++</span><span class="p">)</span> <span class="n">s</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+ 
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Items ="</span> <span class="o">&lt;&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+ 
+    <span class="c1">// vaciando la pila</span>
+    <span class="k">while</span> <span class="p">(</span> <span class="n">s</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="p">)</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">s</span><span class="p">.</span><span class="n">get</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">" "</span><span class="p">;</span>
+ 
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Para terminar oprima &lt;Enter&gt;..."</span><span class="p">;</span>
+    <span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+<hr>
+<h3><span class="mw-headline" id="Pila_din.C3.A1mica">Pila dinámica</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://es.wikibooks.org/w/index.php?title=Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;action=edit&amp;section=4" title="Editar sección: Pila dinámica">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>En el siguiente programa se presenta una implementación de una estructura dinámica tipo pila o stack. Es importante hacer notar que, a diferencia de una pila basada en un arreglo estático, una pila enlazadada dinámicamente no posee de forma natural el mecanismo de acceso por índices, en ese sentido, el programador puede crear los algoritmos necesarios para permitir tal comportamiento. En la clase que presentaremos en el ejemplo no se ha implementado el mecanismo de acceso por índices, ya que la misma se presenta como una alternativa para la simulación de una pila o stack.</p>
+<p>Uno de los puntos más destacables en cuando al uso de listas enlazadas dinámicamente es el hecho de crear estructuras conocidas como nodos. Un nodo es una especie de eslabón ( similar al de una cadena de bicicleta ), es decir, cada nodo se enlaza con otro a través de un puntero que apunta a una estructura del mismo tipo que el nodo. Por ejemplo, para crear una estructura de nodo para almacenar enteros y a la vez para apuntar a otro posible nodo podemos emplear la sintaxis:</p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="k">struct</span> <span class="n">nodo</span> <span class="p">{</span>
+    <span class="kt">int</span>  <span class="n">data</span><span class="p">;</span>
+    <span class="n">nodo</span> <span class="o">*</span><span class="n">siguiente</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+<p>observe que con la declaración anterior estamos creando el tipo estructurado nodo, mismo que posee a los miembros: data para guardar valores enteros, y siguiente para apuntar o enlazar a un supuesto siguiente nodo.</p>
+<p>Ya que las listas dinámicas inicialmente se encuentran vacias, y más aún, una lista dinámica no posee una dirección establecida en tiempo de compilación ya que las dirección de memoria que ocupará cada uno de los elementos se establecerá en tiempo de ejecución, entonces cómo determinar la condición de vacio&nbsp;?. En nuestro ejemplo usaremos un contador ( ITEMS ) que dicho sea de paso, si ITEMS = 0, entonces la lista está vacia. ( la condición de vacio también podría determinarse al verificar el SP, es decir, si el SP = NULL, significa que la lista no posee elementos ).</p>
+<p>Al hacer un análisis previo de los eventos que acontecerán en la pila y su puntero de lectura y escritura (SP, que en esta ocasión es una estructura tipo nodo), se tiene lo siguiente:</p>
+<dl>
+<dd>1) Al principio la lista está vacia, en ese caso el SP es igual a NULL y, en consecuencia, el puntero next también es NULL.</dd>
+</dl>
+<pre>    SP = NULL
+
+    +------+------+
+    | ???? | next |--&gt; NULL
+    +------+------+
+</pre>
+<dl>
+<dd>2) Después de agregar el primer elemento la situación se vería así:</dd>
+</dl>
+<pre>    SP = asignado
+           1
+    +------+------+
+    | data | next |--&gt; NULL
+    +------+------+
+</pre>
+<dl>
+<dd>3) Después de agregar otro elemento la situación se vería así:</dd>
+</dl>
+<pre>    SP = asignado
+           2                  1
+    +------+------+    +------+------+
+    | data | next |--&gt; | data | next |--&gt; NULL
+    +------+------+    +------+------+
+</pre>
+<p><font color="red" size="+1">Ejemplo: Pila basada en un arreglo dinámico</font></p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="cm">/*---------------------------------------------------------------+</span>
+<span class="cm">+ ejemplo de una pila ( STACK ) enlazada dinámicamente +</span>
+<span class="cm">+ +</span>
+<span class="cm">+ Autor: Oscar E. Palacios +</span>
+<span class="cm">+ email: oscarpalacios1@yahoo.com.mx +</span>
+<span class="cm">+ +</span>
+<span class="cm">+ Manifiesto: +</span>
+<span class="cm">+ Este programa puede distribuirse, copiarse y modificarse de +</span>
+<span class="cm">+ forma libre. +</span>
+<span class="cm">+---------------------------------------------------------------*/</span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span>
+<span class="c1">//#include &lt;conio.h&gt;</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="cm">/* tipo de dato que contendrá la lista */</span>
+<span class="k">typedef</span> <span class="kt">char</span> <span class="n">DATA_TYPE</span><span class="p">;</span>
+
+<span class="c1">// declaraci¢n de estructura nodo</span>
+<span class="k">struct</span> <span class="n">nodo</span> <span class="p">{</span>
+	<span class="n">DATA_TYPE</span> <span class="n">data</span><span class="p">;</span>
+	<span class="n">nodo</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">StackDin</span> <span class="p">{</span>
+
+    <span class="c1">// atributos</span>
+    <span class="kt">int</span> <span class="n">ITEMS</span><span class="p">;</span>    <span class="cm">/* número de elementos en la lista */</span>
+    <span class="kt">int</span> <span class="n">ITEMSIZE</span><span class="p">;</span> <span class="cm">/* tamaño de cada elemento */</span>
+    <span class="n">nodo</span> <span class="o">*</span><span class="n">SP</span><span class="p">;</span>     <span class="cm">/* puntero de lectura/escritura */</span>
+
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// constructor</span>
+    <span class="n">StackDin</span><span class="p">()</span> <span class="o">:</span> <span class="n">SP</span><span class="p">(</span><span class="nb">NULL</span><span class="p">),</span> <span class="n">ITEMS</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">ITEMSIZE</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">DATA_TYPE</span><span class="p">))</span> <span class="p">{}</span>
+
+    <span class="c1">// destructor</span>
+    <span class="o">~</span><span class="n">StackDin</span><span class="p">()</span> <span class="p">{}</span>
+
+    <span class="cm">/* agregar componente a la lista */</span>
+    <span class="n">DATA_TYPE</span> <span class="n">put</span><span class="p">(</span><span class="n">DATA_TYPE</span> <span class="n">valor</span><span class="p">)</span>
+    <span class="p">{</span>
+	<span class="n">nodo</span> <span class="o">*</span><span class="n">temp</span><span class="p">;</span>
+
+	<span class="n">temp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">nodo</span><span class="p">;</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+	<span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">valor</span><span class="p">;</span>
+	<span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">SP</span><span class="p">;</span>
+	<span class="n">SP</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+	<span class="n">ITEMS</span> <span class="o">++</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">valor</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kt">int</span> <span class="n">empty</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">ITEMS</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+
+
+    <span class="cm">/* retirar elemento de la lista */</span>
+    <span class="n">DATA_TYPE</span> <span class="n">get</span><span class="p">()</span>
+    <span class="p">{</span>
+	<span class="n">nodo</span> <span class="o">*</span><span class="n">temp</span><span class="p">;</span>
+	<span class="n">DATA_TYPE</span> <span class="n">d</span><span class="p">;</span>
+
+	<span class="k">if</span> <span class="p">(</span> <span class="n">empty</span><span class="p">()</span> <span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+	<span class="n">d</span> <span class="o">=</span> <span class="n">SP</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
+	<span class="n">temp</span> <span class="o">=</span> <span class="n">SP</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">SP</span><span class="p">)</span> <span class="k">delete</span> <span class="n">SP</span><span class="p">;</span>
+	<span class="n">SP</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+	<span class="n">ITEMS</span> <span class="o">--</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">d</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">};</span> <span class="c1">// fin de la clase StackDin</span>
+
+
+<span class="cm">/* punto de prueba para la clase StackDin */</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">//clrscr();</span>
+
+    <span class="n">StackDin</span> <span class="n">s</span><span class="p">;</span>
+    <span class="n">DATA_TYPE</span> <span class="n">d</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="sc">'A'</span><span class="p">;</span> <span class="n">d</span><span class="o">&lt;=</span><span class="sc">'Z'</span><span class="p">;</span> <span class="n">d</span><span class="o">++</span><span class="p">)</span> <span class="n">s</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+
+    <span class="k">while</span> <span class="p">(</span> <span class="o">!</span> <span class="n">s</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="p">)</span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">DATA_TYPE</span><span class="p">)</span><span class="n">s</span><span class="p">.</span><span class="n">get</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">" "</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Para terminar presione &lt;Enter&gt;..."</span><span class="p">;</span>
+    <span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Colas_o_Queues">Colas o Queues</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://es.wikibooks.org/w/index.php?title=Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;action=edit&amp;section=5" title="Editar sección: Colas o Queues">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>Una cola sencilla es una estructura en donde cada elemento es insertado
+inmediatamente después del último elemento insertado; y donde los elementos
+se retiran siempre por el frente de la misma, debido a esto el comportamiento
+de un una cola se conoce como FIFO (primero en entrar, primero en salir).
+</pre>
+<p>Un ejemplo a citar de cola es el comportamiento del buffer del teclado.</p>
+<p>Cuando en el teclado se oprime una tecla, el código del carácter ingresado es trasladado y depositado en una área de memoria intermedia conocida como "el buffer del teclado", para esto el microprocedador llama a una rutina específica. Luego, para leer el carácter depositado en el buffer existe otra función, es decir, hay una rutina para escribir y otra para leer los caracteres del buffer cada una de las cuales posee un puntero; uno para saber en donde dentro del buffer se escribirá el siguiente código y otro para saber de donde dentro del buffer se leerá el siguiente código.</p>
+<h3><span class="mw-headline" id="Cola_en_un_arreglo_est.C3.A1tico">Cola en un arreglo estático</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://es.wikibooks.org/w/index.php?title=Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;action=edit&amp;section=6" title="Editar sección: Cola en un arreglo estático">editar</a><span class="mw-editsection-bracket">]</span></span></h3>
+<p>En el programa que se ve en seguida, se simula el comportamiento de una estructura de cola simple. Aunque en el mismo se usa un arreglo estático de tamañoo fijo se debe mencionar que normalmente las implementaciones hechas por fabricantes y/o terceras personas se basan en listas dinámicas o dinamicamente enlazadas.</p>
+<p>Para la implementación de la clase Queue se han elegido los métodos:</p>
+<pre>    put(),   poner un elemento en la cola
+    get(),   retirar un elemento de la cola
+    empty(), regresa 1 (TRUE) si la cola est  vacia
+    size(),  número de elementos en la cola
+</pre>
+<pre>   El atributo cabeza de la clase Queue es el puntero de lectura.
+   El atributo cola de la clase Queue es el puntero de escritura.
+</pre>
+<p>Es decir, la cola indica la posición dentro de la lista en donde la función put() insertará el siguiente dato, y la cabeza indica la posición dentro de la lista de donde la función get() leerá el siguiente dato.</p>
+<pre>  Cada vez que put() inserta un elemento la cola se incrementa.
+  Cada vez que get() retira un elemento la cabeza se incrementa.
+</pre>
+<p>En el siguente ejemplo se analiza lo que sucede con la cola y la cabeza (punteros de escritura y de lectura de la Lista) cuando se guardan en la cola uno por uno los caracteres 'A', 'B', 'C' y 'D'. Observe que al principio: cola = cabeza = cero.</p>
+<p><br>
+Llenando la cola.</p>
+<pre>  cola
+  |
++---+---+---+---+---+
+|   |   |   |   |   |    al principio
++---+---+---+---+---+
+  |
+  cabeza
+</pre>
+<pre>      cola
+      |
++---+---+---+---+---+    put('A');
+| A |   |   |   |   |    después de haber agregado el primer elemento
++---+---+---+---+---+
+  |
+  cabeza
+</pre>
+<p>...</p>
+<pre>                  cola
+                  |
++---+---+---+---+---+
+| A | B | C | D |   |    después de haber agregado cuatro elementos
++---+---+---+---+---+
+  |
+  cabeza
+</pre>
+<p>Vaciando la cola.</p>
+<pre>  cabeza
+  |
++---+---+---+---+---+
+| A | B | C | D |   |    antes de haber retirado elementos
++---+---+---+---+---+
+</pre>
+<pre>      cabeza
+      |
++---+---+---+---+---+    get();
+| A | B | C | D |   |    después de haber retirado un elemento
++---+---+---+---+---+
+</pre>
+<p>...</p>
+<pre>                  cabeza
+                  |
++---+---+---+---+---+    al final
+| A | B | C | D |   |    después de haber retirado todos los elementos
++---+---+---+---+---+
+                  |
+                  cola
+</pre>
+<p>Observese que al final el cabeza apunta hacia el mismo elemento que la cola, es decir, la cola vuelve a estar vacia. Puesto que la cola que estamos proyectando reside en un arreglo estático los componentes del arreglo aún están dentro de la misma, salvo que para su recuperación se debería escribir otro método. En una cola dinámica (como se demostrará más adelante) los elementos retirados de la misma se eliminan de la memoria y podría no ser posible su recuperación posterior.</p>
+<p><b>Nota:</b> En el programa que aparece en seguida, al tipo de lista implementado por la clase Queue se le conoce como "lista circular" debido al comportamiento de sus punteros. Es decir si los métodos para escribir o leer detectan que el puntero correspondiente ha sobrepasado el tamaño máximo de elementos permitidos dentro de la cola, éste es puesto a cero.</p>
+<p><font size="+1" color="red">Ejemplo: cola en un arreglo estático</font></p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="cm">/*---------------------------------------------------------------+</span>
+<span class="cm">+ ejemplo de una cola (QUEUE) basada en un arreglo estático +</span>
+<span class="cm">+ +</span>
+<span class="cm">+ Autor: Oscar E. Palacios +</span>
+<span class="cm">+ email: oscarpalacios1@yahoo.com.mx +</span>
+<span class="cm">+ +</span>
+<span class="cm">+ Manifiesto: +</span>
+<span class="cm">+ Este programa puede distribuirse, copiarse y modificarse de +</span>
+<span class="cm">+ forma libre. +</span>
+<span class="cm">+---------------------------------------------------------------*/</span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream.h&gt;</span>
+
+<span class="cp">#define MAX_SIZE 256 </span><span class="cm">/* capacidad máxima */</span>
+<span class="k">typedef</span> <span class="kt">char</span> <span class="n">almacen</span><span class="p">[</span><span class="n">MAX_SIZE</span><span class="p">];</span>
+
+<span class="k">class</span> <span class="nc">Queue</span> <span class="p">{</span>
+
+<span class="kt">int</span> <span class="n">cabeza</span><span class="p">;</span> <span class="cm">/* puntero de lectura */</span>
+<span class="kt">int</span> <span class="n">cola</span><span class="p">;</span> <span class="cm">/* puntero de escritura */</span>
+<span class="kt">int</span> <span class="n">ITEMS</span><span class="p">;</span> <span class="cm">/* número de elementos en la lista */</span>
+<span class="kt">int</span> <span class="n">ITEMSIZE</span><span class="p">;</span> <span class="cm">/* tamaño de cada elemento */</span>
+<span class="n">almacen</span> <span class="n">alma</span><span class="p">;</span> <span class="cm">/* el almacen */</span>
+
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// constructor</span>
+    <span class="n">Queue</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">cabeza</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">cola</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">ITEMS</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">ITEMSIZE</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// destructor</span>
+    <span class="o">~</span><span class="n">Queue</span><span class="p">()</span> <span class="p">{}</span>
+
+<span class="c1">// regresa 1 (true) si la lista está vacia</span>
+<span class="kt">int</span> <span class="n">empty</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">ITEMS</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="c1">// insertar elemento a la lista</span>
+<span class="kt">int</span> <span class="n">put</span><span class="p">(</span><span class="kt">int</span> <span class="n">d</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">ITEMS</span> <span class="o">==</span> <span class="n">MAX_SIZE</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">cola</span> <span class="o">&gt;=</span> <span class="n">MAX_SIZE</span><span class="p">)</span> <span class="p">{</span> <span class="n">cola</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+    <span class="n">alma</span><span class="p">[</span><span class="n">cola</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">;</span>
+    <span class="n">cola</span> <span class="o">++</span><span class="p">;</span>
+    <span class="n">ITEMS</span> <span class="o">++</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">d</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// retirar elemento de la lista</span>
+<span class="kt">int</span> <span class="n">get</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">d</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">empty</span><span class="p">()</span> <span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">cabeza</span> <span class="o">&gt;=</span> <span class="n">MAX_SIZE</span> <span class="p">)</span> <span class="p">{</span> <span class="n">cabeza</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">alma</span><span class="p">[</span><span class="n">cabeza</span><span class="p">];</span>
+    <span class="n">cabeza</span> <span class="o">++</span><span class="p">;</span>
+    <span class="n">ITEMS</span> <span class="o">--</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">d</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// regresa el n£mero de elementos en lista</span>
+<span class="kt">int</span> <span class="n">size</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">ITEMS</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="p">};</span> <span class="c1">// fin de la clase Queue</span>
+
+
+<span class="c1">// probando la cola</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">d</span><span class="p">;</span>
+    <span class="n">Queue</span> <span class="n">q</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="sc">'A'</span><span class="p">;</span> <span class="n">d</span><span class="o">&lt;=</span><span class="sc">'Z'</span><span class="p">;</span> <span class="n">d</span><span class="o">++</span><span class="p">)</span> <span class="n">q</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Items = "</span> <span class="o">&lt;&lt;</span> <span class="n">q</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span> <span class="n">q</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">q</span><span class="p">.</span><span class="n">get</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">" "</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Para terminar oprima &lt;Enter&gt; ..."</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="p">.</span><span class="n">get</span><span class="p">();</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p><font size="+1" color="red">Ejemplo: cola en un arreglo dinámico</font></p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="cm">/*---------------------------------------------------------------+</span>
+<span class="cm">+ ejemplo de una cola (QUEUE) basada en un arreglo dinámico +</span>
+<span class="cm">+ +</span>
+<span class="cm">+ Autor: Oscar E. Palacios +</span>
+<span class="cm">+ email: oscarpalacios1@yahoo.com.mx +</span>
+<span class="cm">+ +</span>
+<span class="cm">+ Manifiesto: +</span>
+<span class="cm">+ Este programa puede distribuirse, copiarse y modificarse de +</span>
+<span class="cm">+ forma libre. +</span>
+<span class="cm">+---------------------------------------------------------------*/</span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">typedef</span> <span class="kt">char</span> <span class="n">DATA_TYPE</span><span class="p">;</span>
+
+<span class="k">struct</span> <span class="n">nodo</span> <span class="p">{</span>
+	<span class="n">DATA_TYPE</span> <span class="n">data</span><span class="p">;</span>
+	<span class="n">nodo</span> <span class="o">*</span><span class="n">next</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">QueueDin</span> <span class="p">{</span>
+
+    <span class="c1">// atributos</span>
+    <span class="kt">int</span> <span class="n">ITEMS</span><span class="p">,</span> <span class="n">ITEMSIZE</span><span class="p">;</span>
+    <span class="n">nodo</span> <span class="o">*</span><span class="n">cola</span><span class="p">,</span> <span class="o">*</span><span class="n">cabeza</span><span class="p">;</span>
+
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// constructor</span>
+    <span class="n">QueueDin</span><span class="p">()</span> <span class="o">:</span> <span class="n">cola</span><span class="p">(</span><span class="nb">NULL</span><span class="p">),</span> <span class="n">cabeza</span><span class="p">(</span><span class="nb">NULL</span><span class="p">),</span> <span class="n">ITEMS</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">ITEMSIZE</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">DATA_TYPE</span><span class="p">))</span> <span class="p">{}</span>
+
+    <span class="c1">// destructor</span>
+    <span class="o">~</span><span class="n">QueueDin</span><span class="p">()</span> <span class="p">{}</span>
+
+    <span class="cm">/* agregar componente a la lista */</span>
+    <span class="n">DATA_TYPE</span> <span class="n">put</span><span class="p">(</span><span class="n">DATA_TYPE</span> <span class="n">valor</span><span class="p">)</span>
+    <span class="p">{</span>
+	<span class="n">nodo</span> <span class="o">*</span><span class="n">temp</span><span class="p">;</span>
+
+	<span class="n">temp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">nodo</span><span class="p">;</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+	<span class="n">ITEMS</span> <span class="o">++</span><span class="p">;</span>
+	<span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">valor</span><span class="p">;</span>
+	<span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="n">cabeza</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
+	<span class="p">{</span>
+	 <span class="n">cabeza</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+	 <span class="n">cola</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+	<span class="p">}</span> <span class="k">else</span>
+	<span class="p">{</span>
+	 <span class="n">cola</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+	 <span class="n">cola</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="n">valor</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// regresa 1 (true) si la lista está vacia</span>
+    <span class="kt">int</span> <span class="n">empty</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">ITEMS</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+
+
+    <span class="cm">/* retirar elemento de la lista */</span>
+    <span class="n">DATA_TYPE</span> <span class="n">get</span><span class="p">()</span>
+    <span class="p">{</span>
+	<span class="n">nodo</span> <span class="o">*</span><span class="n">temp</span><span class="p">;</span>
+	<span class="n">DATA_TYPE</span> <span class="n">d</span><span class="p">;</span>
+
+	<span class="k">if</span> <span class="p">(</span> <span class="n">empty</span><span class="p">()</span> <span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+	<span class="n">d</span> <span class="o">=</span> <span class="n">cabeza</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
+	<span class="n">temp</span> <span class="o">=</span> <span class="n">cabeza</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">cabeza</span><span class="p">)</span> <span class="k">delete</span> <span class="n">cabeza</span><span class="p">;</span>
+	<span class="n">cabeza</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+	<span class="n">ITEMS</span> <span class="o">--</span><span class="p">;</span>
+	<span class="k">return</span> <span class="n">d</span><span class="p">;</span>
+    <span class="p">}</span>
+
+<span class="p">};</span> <span class="c1">// fin de la clase QueueDin</span>
+
+<span class="cm">/* punto de prueba */</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">QueueDin</span> <span class="n">s</span><span class="p">;</span>
+    <span class="n">DATA_TYPE</span> <span class="n">d</span><span class="p">;</span>
+
+    <span class="c1">// llenando la cola</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="sc">'A'</span><span class="p">;</span> <span class="n">d</span><span class="o">&lt;=</span><span class="sc">'Z'</span><span class="p">;</span> <span class="n">d</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">s</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">d</span> <span class="o">&lt;&lt;</span> <span class="s">" "</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="c1">// vaciando la cola</span>
+    <span class="k">while</span> <span class="p">(</span> <span class="o">!</span> <span class="n">s</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="p">)</span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">DATA_TYPE</span><span class="p">)</span><span class="n">s</span><span class="p">.</span><span class="n">get</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">" "</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Para terminar presione &lt;Enter&gt;..."</span><span class="p">;</span>
+    <span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<h2><span class="mw-headline" id="Colas_de_doble_enlace">Colas de doble enlace</span><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="https://es.wikibooks.org/w/index.php?title=Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;action=edit&amp;section=7" title="Editar sección: Colas de doble enlace">editar</a><span class="mw-editsection-bracket">]</span></span></h2>
+<pre>Una cola doble es una estructuras en donde cada elemento puede ser insertado y
+recuperado por la parte del frente (cabeza) o por la parte de atras (cola) de la
+lista. A diferencia de una cola sencilla, en donde solo se necesitan un método para
+leer y otro para escribir componentes en la lista, en una doble cola debe haber dos
+métodos para leer ( uno para leer por el frente y uno para leer por atras ) y dos
+métodos para escribir ( uno para escribir por el frente y uno para escribir por atras ).
+</pre>
+<p><br>
+En el programa que se verá en seguida, se simula el comportamiento de una estructura de cola doble con base en un arreglo estático. En dicho programa se declara e implementa la clase <b>SDQueue</b> con los siguientes métodos:</p>
+<pre>    put_front(),  poner un elemento en el frente de la cola
+    put_back(),   poner un elemento en la parte tracera de la cola
+    get_front(),  retirar un elemento de la parte frontal de la cola
+    get_back(),   retirar un elemento de la parte tracera de la cola
+    empty(),      regresa 1 (TRUE) si la cola est  vacia
+    size(),       número de elementos en la cola
+</pre>
+<p>Nota: observe que para los métodos put_front() y get_front() se hace uso de la función memmove(), esto es necesario debido al hecho de que put_front() tiene que mover una posición hacia atras todos los elementos en la lista antes de insertar el componente indicado; por otro lado, la función get_front() tiene que mover una posición hacia adelante a todos los elementos que le siguen al primer elemento.</p>
+<p><font size="+1" color="red">Ejemplo: doble cola en un arreglo estático</font></p>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="cm">/*------------------------------------------------------------------+</span>
+<span class="cm">+ ejemplo de una cola doble (DQUEUE) basada en un arreglo est tico +</span>
+<span class="cm">+ +</span>
+<span class="cm">+ Autor: Oscar E. Palacios +</span>
+<span class="cm">+ email: oscarpalacios1@yahoo.com.mx +</span>
+<span class="cm">+ +</span>
+<span class="cm">+ Manifiesto: +</span>
+<span class="cm">+ Este programa puede distribuirse, copiarse y modificarse de +</span>
+<span class="cm">+ forma libre. +</span>
+<span class="cm">+------------------------------------------------------------------*/</span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream.h&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;mem.h&gt; // por memmove</span>
+
+<span class="c1">// using namespace std;</span>
+<span class="cp">#define MAX_SIZE 256</span>
+<span class="cp">#define t_error -1;</span>
+
+<span class="k">typedef</span> <span class="kt">int</span> <span class="n">DATA_TYPE</span><span class="p">;</span> <span class="c1">// máximo número de elementos</span>
+<span class="k">typedef</span> <span class="kt">int</span> <span class="n">almacen</span><span class="p">[</span><span class="n">MAX_SIZE</span><span class="p">];</span>
+
+<span class="k">class</span> <span class="nc">SDQueue</span> <span class="p">{</span>
+    <span class="c1">// atributos</span>
+    <span class="kt">int</span>  <span class="n">itemsize</span><span class="p">;</span> <span class="c1">// tamaño de cada elemento</span>
+    <span class="kt">int</span>  <span class="n">items</span><span class="p">;</span>    <span class="c1">// número de elementos</span>
+    <span class="kt">int</span>  <span class="n">cola</span><span class="p">,</span> <span class="n">cabeza</span><span class="p">;</span> <span class="c1">// punteros de lectura y escritura</span>
+    <span class="n">almacen</span> <span class="n">alma</span><span class="p">;</span>  <span class="c1">// el almacen o arreglo</span>
+
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// constructor</span>
+    <span class="n">SDQueue</span><span class="p">()</span> <span class="o">:</span> <span class="n">cola</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">cabeza</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">items</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">itemsize</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">DATA_TYPE</span><span class="p">))</span> <span class="p">{}</span>
+
+    <span class="c1">// destructor</span>
+    <span class="o">~</span><span class="n">SDQueue</span><span class="p">()</span> <span class="p">{}</span>
+
+<span class="kt">int</span> <span class="n">empty</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">items</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="kt">int</span> <span class="n">size</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">items</span><span class="p">;</span> <span class="p">}</span>
+
+<span class="cm">/* agregar componente en la parte tracera de la lista */</span>
+<span class="n">DATA_TYPE</span> <span class="n">put_back</span><span class="p">(</span><span class="n">DATA_TYPE</span> <span class="n">valor</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">items</span> <span class="o">==</span> <span class="n">MAX_SIZE</span><span class="p">)</span> <span class="k">return</span> <span class="n">t_error</span><span class="p">;</span>
+    <span class="n">alma</span><span class="p">[</span><span class="n">cola</span><span class="p">]</span> <span class="o">=</span> <span class="n">valor</span><span class="p">;</span>
+    <span class="n">items</span> <span class="o">++</span><span class="p">;</span>
+    <span class="n">cola</span>  <span class="o">++</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">valor</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* agregar componente en la parte delantera de la lista */</span>
+<span class="n">DATA_TYPE</span> <span class="n">put_front</span><span class="p">(</span><span class="n">DATA_TYPE</span> <span class="n">valor</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">items</span> <span class="o">==</span> <span class="n">MAX_SIZE</span><span class="p">)</span> <span class="k">return</span> <span class="n">t_error</span><span class="p">;</span>
+    <span class="n">memmove</span><span class="p">((</span><span class="kt">void</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">alma</span><span class="p">[</span><span class="n">cabeza</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">alma</span><span class="p">[</span><span class="n">cabeza</span><span class="p">],</span> <span class="n">items</span><span class="o">*</span><span class="n">itemsize</span><span class="p">);</span>
+    <span class="n">alma</span><span class="p">[</span><span class="n">cabeza</span><span class="p">]</span> <span class="o">=</span> <span class="n">valor</span><span class="p">;</span>
+    <span class="n">items</span> <span class="o">++</span><span class="p">;</span>
+    <span class="n">cola</span>  <span class="o">++</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">valor</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="cm">/* retirar elemento de la parte frontal de la lista */</span>
+<span class="n">DATA_TYPE</span> <span class="n">get_front</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">DATA_TYPE</span> <span class="n">d</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">empty</span><span class="p">()</span> <span class="p">)</span> <span class="k">return</span> <span class="n">t_error</span><span class="p">;</span>
+    <span class="n">items</span> <span class="o">--</span><span class="p">;</span>
+    <span class="n">cola</span>  <span class="o">--</span><span class="p">;</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">alma</span><span class="p">[</span><span class="n">cabeza</span><span class="p">];</span>
+    <span class="n">memmove</span><span class="p">((</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">alma</span><span class="p">[</span><span class="n">cabeza</span><span class="p">],</span> <span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">alma</span><span class="p">[</span><span class="n">cabeza</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">items</span><span class="o">*</span><span class="n">itemsize</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">d</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* retirar elemento de la parte tracera de la lista */</span>
+<span class="n">DATA_TYPE</span> <span class="n">get_back</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">DATA_TYPE</span> <span class="n">d</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">empty</span><span class="p">()</span> <span class="p">)</span> <span class="k">return</span> <span class="n">t_error</span><span class="p">;</span>
+    <span class="n">items</span><span class="o">--</span><span class="p">;</span>
+    <span class="n">cola</span> <span class="o">--</span><span class="p">;</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">alma</span><span class="p">[</span><span class="n">cola</span><span class="p">];</span>
+    <span class="k">return</span> <span class="n">d</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">};</span> <span class="c1">// fin de la clase SDQueue</span>
+
+<span class="cm">/* punto de prueba */</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">SDQueue</span> <span class="n">s</span><span class="p">;</span>
+    <span class="n">DATA_TYPE</span> <span class="n">d</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="sc">'A'</span><span class="p">;</span> <span class="n">d</span><span class="o">&lt;=</span><span class="sc">'Z'</span><span class="p">;</span> <span class="n">d</span><span class="o">++</span><span class="p">)</span> <span class="n">s</span><span class="p">.</span><span class="n">put_back</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+
+    <span class="k">while</span> <span class="p">(</span> <span class="o">!</span> <span class="n">s</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="p">)</span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="n">s</span><span class="p">.</span><span class="n">get_front</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">" "</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Para terminar presione &lt;Enter&gt;..."</span><span class="p">;</span>
+    <span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>Una cola doblemente encadenada es una estructuras en donde cada elemento puede ser insertado y recuperado por la parte del frente (cabeza) o por la parte de atras (cola) de la lista. A diferencia de una cola sencilla, en donde solo se necesita un puntero a un siguiente elemento, la estructura del nodo para una doble cola debe poseer un puntero a un posible siguiente elemento y un puntero a otro posible anterior elemento. Por ejemplo, para crear una estructura de nodo con doble enlace para coleccionar números enteros podemos usar la sintaxis:</p>
+<pre>    struct nodo {
+        int data;
+        nodo *next, *prev;
+    };
+</pre>
+<p>Gráficamente podemos imaginar la estructura anterior como:</p>
+<pre>       +------+------+------+
+    &lt;--| prev | data | next |--&gt;
+       +------+------+------+
+</pre>
+<p>En el programa que se verá en seguida, se simula el comportamiento de una estructura de cola de doble enlace. Para la implementación de la clase DDqueue en el programa se han elegido los métodos:</p>
+<pre>    put_front(),  poner un elemento en el frente de la cola
+    put_back(),   poner un elemento en la parte tracera de la cola
+    get_front(),  retirar un elemento de la parte frontal de la cola
+    get_back(),   retirar un elemento de la parte tracera de la cola
+    empty(),      regresa 1 (TRUE) si la cola est  vacia
+    size(),       n£mero de elementos en la cola
+</pre>
+<div class="mw-highlight mw-content-ltr" dir="ltr">
+<pre><span class="cm">/*---------------------------------------------------------------+</span>
+<span class="cm">+ ejemplo de una cola doblemente enlazada (Dqueue) basada en un +</span>
+<span class="cm">+ arreglo dinámico +</span>
+<span class="cm">+ +</span>
+<span class="cm">+ Autor: Oscar E. Palacios +</span>
+<span class="cm">+ email: oscarpalacios1@yahoo.com.mx +</span>
+<span class="cm">+ +</span>
+<span class="cm">+ Manifiesto: +</span>
+<span class="cm">+ Este programa puede distribuirse, copiarse y modificarse de +</span>
+<span class="cm">+ forma libre. +</span>
+<span class="cm">+---------------------------------------------------------------*/</span>
+
+<span class="cp">#include</span> <span class="cpf">&lt;iostream.h&gt;</span>
+<span class="cp">#include</span> <span class="cpf">&lt;conio.h&gt;</span>
+
+<span class="c1">// using namespace std;</span>
+
+<span class="k">typedef</span> <span class="kt">char</span> <span class="n">DATA_TYPE</span><span class="p">;</span>
+
+<span class="k">struct</span> <span class="n">nodo</span> <span class="p">{</span>
+    <span class="n">DATA_TYPE</span> <span class="n">data</span><span class="p">;</span>
+    <span class="n">nodo</span> <span class="o">*</span><span class="n">next</span><span class="p">,</span> <span class="o">*</span><span class="n">prev</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="k">class</span> <span class="nc">DDqueue</span> <span class="p">{</span>
+
+    <span class="kt">int</span>  <span class="n">itemsize</span><span class="p">,</span> <span class="n">items</span><span class="p">;</span>
+    <span class="n">nodo</span> <span class="o">*</span><span class="n">cola</span><span class="p">,</span> <span class="o">*</span><span class="n">cabeza</span><span class="p">;</span>
+
+
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// constructor</span>
+    <span class="n">DDqueue</span><span class="p">()</span> <span class="o">:</span> <span class="n">cola</span><span class="p">(</span><span class="nb">NULL</span><span class="p">),</span> <span class="n">cabeza</span><span class="p">(</span><span class="nb">NULL</span><span class="p">),</span> <span class="n">items</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">itemsize</span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">DATA_TYPE</span><span class="p">))</span> <span class="p">{}</span>
+
+    <span class="c1">// destructor</span>
+    <span class="o">~</span><span class="n">DDqueue</span><span class="p">()</span> <span class="p">{}</span>
+
+
+<span class="cm">/* agregar componente en la parte tracera de la lista */</span>
+<span class="n">DATA_TYPE</span> <span class="n">put_back</span><span class="p">(</span><span class="n">DATA_TYPE</span> <span class="n">valor</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">nodo</span> <span class="o">*</span><span class="n">temp</span><span class="p">;</span>
+
+    <span class="n">temp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">nodo</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+    <span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">valor</span><span class="p">;</span>
+
+    <span class="n">items</span> <span class="o">++</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">cabeza</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="p">)</span>
+    <span class="p">{</span>
+	<span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+	<span class="n">temp</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+	<span class="n">cabeza</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+	<span class="n">cola</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span>
+	<span class="p">{</span>
+	 <span class="n">cola</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+	 <span class="n">temp</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="n">cola</span><span class="p">;</span>
+	 <span class="n">cola</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+	 <span class="n">cola</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+	<span class="p">}</span>
+    <span class="k">return</span> <span class="n">valor</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* agregar componente en la parte frontal de la lista */</span>
+<span class="n">DATA_TYPE</span> <span class="n">put_front</span><span class="p">(</span><span class="n">DATA_TYPE</span> <span class="n">valor</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">nodo</span> <span class="o">*</span><span class="n">temp</span><span class="p">;</span>
+
+    <span class="n">temp</span> <span class="o">=</span> <span class="k">new</span> <span class="n">nodo</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+    <span class="n">temp</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">=</span> <span class="n">valor</span><span class="p">;</span>
+
+    <span class="n">items</span> <span class="o">++</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">cabeza</span> <span class="o">==</span> <span class="nb">NULL</span> <span class="p">)</span>
+    <span class="p">{</span>
+	<span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+	<span class="n">temp</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+	<span class="n">cabeza</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+	<span class="n">cola</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span>
+	<span class="p">{</span>
+	 <span class="n">cabeza</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+	 <span class="n">temp</span><span class="o">-&gt;</span><span class="n">next</span> <span class="o">=</span> <span class="n">cabeza</span><span class="p">;</span>
+	 <span class="n">cabeza</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+	 <span class="n">cabeza</span><span class="o">-&gt;</span><span class="n">prev</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+	<span class="p">}</span>
+    <span class="k">return</span> <span class="n">valor</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// regresa true si la lista está vacia</span>
+<span class="kt">int</span> <span class="n">empty</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="n">items</span> <span class="o">==</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
+
+
+<span class="cm">/* retirar elemento de la parte frontal lista */</span>
+<span class="n">DATA_TYPE</span> <span class="n">get_front</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">nodo</span> <span class="o">*</span><span class="n">temp</span><span class="p">;</span>
+    <span class="n">DATA_TYPE</span> <span class="n">d</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">empty</span><span class="p">()</span> <span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+    <span class="n">items</span> <span class="o">--</span><span class="p">;</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">cabeza</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">cabeza</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">cabeza</span><span class="p">)</span> <span class="k">delete</span> <span class="n">cabeza</span><span class="p">;</span>
+    <span class="n">cabeza</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">d</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cm">/* retirar elemento de la parte tracera de la lista */</span>
+<span class="n">DATA_TYPE</span> <span class="n">get_back</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">nodo</span> <span class="o">*</span><span class="n">temp</span><span class="p">;</span>
+    <span class="n">DATA_TYPE</span> <span class="n">d</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">empty</span><span class="p">()</span> <span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+    <span class="n">items</span><span class="o">--</span><span class="p">;</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">cola</span><span class="o">-&gt;</span><span class="n">data</span><span class="p">;</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">cola</span><span class="o">-&gt;</span><span class="n">prev</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">cola</span><span class="p">)</span> <span class="k">delete</span> <span class="n">cola</span><span class="p">;</span>
+    <span class="n">cola</span> <span class="o">=</span> <span class="n">temp</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">d</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="p">};</span> <span class="c1">// fin de la clase DDqueue</span>
+
+<span class="cm">/* punto de prueba */</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">clrscr</span><span class="p">();</span>
+
+    <span class="n">DDqueue</span> <span class="n">s</span><span class="p">;</span>
+    <span class="n">DATA_TYPE</span> <span class="n">d</span><span class="p">;</span>
+
+    <span class="c1">// insertando elementos en la parte tracera</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="sc">'A'</span><span class="p">;</span> <span class="n">d</span><span class="o">&lt;=</span><span class="sc">'Z'</span><span class="p">;</span> <span class="n">d</span><span class="o">++</span><span class="p">)</span> <span class="n">s</span><span class="p">.</span><span class="n">put_back</span><span class="p">(</span><span class="n">d</span><span class="p">);</span>
+
+    <span class="c1">// insertando en la parte delantera</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">d</span><span class="o">=</span><span class="mi">9</span><span class="p">;</span> <span class="n">d</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span> <span class="n">d</span><span class="o">--</span><span class="p">)</span><span class="n">s</span><span class="p">.</span><span class="n">put_front</span><span class="p">(</span><span class="n">d</span><span class="o">+</span><span class="sc">'0'</span><span class="p">);</span>
+
+    <span class="c1">// vaciando la lista</span>
+    <span class="k">while</span> <span class="p">(</span> <span class="o">!</span> <span class="n">s</span><span class="p">.</span><span class="n">empty</span><span class="p">()</span> <span class="p">)</span>
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="p">(</span><span class="n">DATA_TYPE</span><span class="p">)</span><span class="n">s</span><span class="p">.</span><span class="n">get_front</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="s">" "</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Para terminar presione &lt;Enter&gt;..."</span><span class="p">;</span>
+    <span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><br></p>
+<table align="center" cellpadding="12">
+<tbody><tr>
+<td>← <a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Punteros" title="Programación en C++/Punteros">Punteros</a></td>
+<td><a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II#Introducci.C3.B3n">Arriba</a></td>
+<td><a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Plantillas" title="Programación en C++/Plantillas">Plantillas</a> →</td>
+</tr>
+</tbody></table>
+
+
+<!-- 
+NewPP limit report
+Parsed by mw1258
+Cached time: 20160603033012
+Cache expiry: 2592000
+Dynamic content: false
+CPU time usage: 0.047 seconds
+Real time usage: 0.802 seconds
+Preprocessor visited node count: 165/1000000
+Preprocessor generated node count: 0/1500000
+Post‐expand include size: 281/2097152 bytes
+Template argument size: 0/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/500
+Number of Wikibase entities loaded: 0-->
+
+<!-- 
+Transclusion expansion time report (%,ms,calls,template)
+100.00%    6.868      1 - Plantilla:BookCat
+100.00%    6.868      1 - -total
+ 30.92%    2.124      1 - Plantilla:FULLBOOKNAME
+-->
+
+<!-- Saved in parser cache with key eswikibooks:pcache:idhash:20049-0!*!0!!es!*!* and timestamp 20160603033012 and revision id 304548
+ -->
+<noscript>&lt;img src="//es.wikibooks.org/wiki/Special:CentralAutoLogin/start?type=1x1" alt="" title="" width="1" height="1" style="border: none; position: absolute;" /&gt;</noscript></div>					<div class="printfooter">
+						Obtenido de «<a dir="ltr" href="https://es.wikibooks.org/w/index.php?title=Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;oldid=304548">https://es.wikibooks.org/w/index.php?title=Programación_en_C%2B%2B/Estructuras_II&amp;oldid=304548</a>»					</div>
+				<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="https://es.wikibooks.org/wiki/Especial:Categor%C3%ADas" title="Especial:Categorías">Categoría</a>: <ul><li><a href="https://es.wikibooks.org/wiki/Categor%C3%ADa:Programaci%C3%B3n_en_C%2B%2B" title="Categoría:Programación en C++">Programación en C++</a></li></ul></div></div>				<div class="visualClear"></div>
+							</div>
+		</div>
+		<div id="mw-navigation">
+			<h2>Menú de navegación</h2>
+
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" class="" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label">Herramientas personales</h3>
+						<ul>
+							<li id="pt-anonuserpage">No has iniciado sesión</li><li id="pt-anontalk"><a href="https://es.wikibooks.org/wiki/Especial:MiDiscusi%C3%B3n" title="Discusión sobre ediciones hechas desde esta dirección IP [alt-shift-n]" accesskey="n">Discusión</a></li><li id="pt-anoncontribs"><a href="https://es.wikibooks.org/wiki/Especial:MisContribuciones" title="Una lista de modificaciones hechas desde esta dirección IP [alt-shift-y]" accesskey="y">Contribuciones</a></li><li id="pt-createaccount"><a href="https://es.wikibooks.org/w/index.php?title=Especial:Crear_una_cuenta&amp;returnto=Programaci%C3%B3n+en+C%2B%2B%2FEstructuras+II" title="Te recomendamos crear una cuenta e iniciar sesión; sin embargo, no es obligatorio">Crear una cuenta</a></li><li id="pt-login"><a href="https://es.wikibooks.org/w/index.php?title=Especial:Entrar&amp;returnto=Programaci%C3%B3n+en+C%2B%2B%2FEstructuras+II" title="Te recomendamos iniciar sesión, aunque no es obligatorio [alt-shift-o]" accesskey="o">Acceder</a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label">Espacios de nombres</h3>
+						<ul>
+															<li id="ca-nstab-main" class="selected"><span><a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II" title="Ver la página de contenido [alt-shift-c]" accesskey="c">Página</a></span></li>
+															<li id="ca-talk" class="new"><span><a href="https://es.wikibooks.org/w/index.php?title=Discusi%C3%B3n:Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;action=edit&amp;redlink=1" title="Discusión acerca de la página de contenido [alt-shift-t]" accesskey="t" rel="discussion">discusión</a></span></li>
+													</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<h3 id="p-variants-label" tabindex="0">
+							<span>Variantes</span><a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II#" tabindex="-1"></a>
+						</h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label">Vistas</h3>
+						<ul>
+															<li id="ca-view" class="selected"><span><a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II">Leer</a></span></li>
+															<li id="ca-edit"><span><a href="https://es.wikibooks.org/w/index.php?title=Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;action=edit" title="Editar esta página [alt-shift-e]" accesskey="e">Editar</a></span></li>
+															<li id="ca-history" class="collapsible"><span><a href="https://es.wikibooks.org/w/index.php?title=Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;action=history" title="Versiones anteriores de esta página [alt-shift-h]" accesskey="h">Ver historial</a></span></li>
+													</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label" tabindex="0"><span>Más</span><a href="https://es.wikibooks.org/wiki/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II#" tabindex="-1"></a></h3>
+
+						<div class="menu">
+							<ul>
+															</ul>
+						</div>
+					</div>
+										<div id="p-search" role="search">
+						<h3>
+							<label for="searchInput">Buscar</label>
+						</h3>
+
+						<form action="https://es.wikibooks.org/w/index.php" id="searchform">
+							<div id="simpleSearch">
+							<input type="search" name="search" placeholder="Buscar" title="Buscar en este wiki [alt-shift-f]" accesskey="f" id="searchInput" tabindex="1" autocomplete="off"><input type="hidden" value="Especial:Buscar" name="title"><input type="submit" name="go" value="Ir" title="Ir a la página con este nombre exacto si existe" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="https://es.wikibooks.org/wiki/Portada" title="Visitar la página principal"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label">Navegación</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-mainpage"><a href="https://es.wikibooks.org/wiki/Portada" title="Visitar la página principal [alt-shift-z]" accesskey="z">Portada</a></li><li id="n-currentevents"><a href="https://es.wikibooks.org/wiki/Categor%C3%ADa:Libros" title="Encuentra información de contexto sobre acontecimientos actuales">Categorías de libros</a></li><li id="n-recentchanges"><a href="https://es.wikibooks.org/wiki/Especial:CambiosRecientes" title="Lista de cambios recientes en el wiki [alt-shift-r]" accesskey="r">Cambios recientes</a></li><li id="n-randompage"><a href="https://es.wikibooks.org/wiki/Especial:Aleatoria" title="Cargar un libro seleccionado al azar [alt-shift-x]" accesskey="x">Libro aleatorio</a></li><li id="n-help"><a href="https://es.wikibooks.org/wiki/Wikilibros:Ayuda" title="El lugar para aprender">Ayuda</a></li><li id="n-sitesupport"><a href="https://donate.wikimedia.org/wiki/Special:FundraiserRedirector?utm_source=donate&amp;utm_medium=sidebar&amp;utm_campaign=C13_es.wikibooks.org&amp;uselang=es" title="Apóyanos">Donaciones</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Comunidad" aria-labelledby="p-Comunidad-label">
+			<h3 id="p-Comunidad-label">Comunidad</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-Caf.C3.A9"><a href="https://es.wikibooks.org/wiki/Wikilibros:Caf%C3%A9">Café</a></li><li id="n-portal"><a href="https://es.wikibooks.org/wiki/Wikilibros:Portal_de_la_comunidad" title="Acerca del proyecto, lo que puedes hacer, dónde encontrar información">Portal de la comunidad</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Subproyectos" aria-labelledby="p-Subproyectos-label">
+			<h3 id="p-Subproyectos-label">Subproyectos</h3>
+
+			<div class="body">
+									<ul>
+						<li id="n-Recetario"><a href="https://es.wikibooks.org/wiki/Artes_culinarias">Recetario</a></li><li id="n-Wikichicos"><a href="https://es.wikibooks.org/wiki/Wikichicos">Wikichicos</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-coll-print_export" aria-labelledby="p-coll-print_export-label">
+			<h3 id="p-coll-print_export-label">Imprimir/exportar</h3>
+
+			<div class="body">
+									<ul>
+						<li id="coll-create_a_book"><a href="https://es.wikibooks.org/w/index.php?title=Especial:Libro&amp;bookcmd=book_creator&amp;referer=Programaci%C3%B3n+en+C%2B%2B%2FEstructuras+II">Crear un libro</a></li><li id="coll-download-as-rdf2latex"><a href="https://es.wikibooks.org/w/index.php?title=Especial:Libro&amp;bookcmd=render_article&amp;arttitle=Programaci%C3%B3n+en+C%2B%2B%2FEstructuras+II&amp;returnto=Programaci%C3%B3n+en+C%2B%2B%2FEstructuras+II&amp;oldid=304548&amp;writer=rdf2latex">Descargar como PDF</a></li><li id="t-print"><a href="https://es.wikibooks.org/w/index.php?title=Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;printable=yes" title="Versión imprimible de esta página [alt-shift-p]" accesskey="p">Versión para imprimir</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label">Herramientas</h3>
+
+			<div class="body">
+									<ul>
+						<li id="t-whatlinkshere"><a href="https://es.wikibooks.org/wiki/Especial:LoQueEnlazaAqu%C3%AD/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II" title="Lista de todas las páginas del wiki que enlazan aquí [alt-shift-j]" accesskey="j">Lo que enlaza aquí</a></li><li id="t-recentchangeslinked"><a href="https://es.wikibooks.org/wiki/Especial:CambiosEnEnlazadas/Programaci%C3%B3n_en_C%2B%2B/Estructuras_II" title="Cambios recientes en las páginas que enlazan con esta [alt-shift-k]" accesskey="k">Cambios relacionados</a></li><li id="t-upload"><a href="https://commons.wikimedia.org/wiki/Special:UploadWizard?uselang=es" title="Subir archivos [alt-shift-u]" accesskey="u">Subir archivo</a></li><li id="t-specialpages"><a href="https://es.wikibooks.org/wiki/Especial:P%C3%A1ginasEspeciales" title="Lista de todas las páginas especiales [alt-shift-q]" accesskey="q">Páginas especiales</a></li><li id="t-permalink"><a href="https://es.wikibooks.org/w/index.php?title=Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;oldid=304548" title="Enlace permanente a esta versión de la página">Enlace permanente</a></li><li id="t-info"><a href="https://es.wikibooks.org/w/index.php?title=Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;action=info" title="Más información sobre esta página">Información de la página</a></li><li id="t-shorturl"><a href="https://es.wikibooks.org/s/7co" title="Copie este enlace corto para compartirlo">Enlace corto</a></li><li id="t-cite"><a href="https://es.wikibooks.org/w/index.php?title=Especial:Citar&amp;page=Programaci%C3%B3n_en_C%2B%2B%2FEstructuras_II&amp;id=304548" title="Información sobre cómo citar esta página">Citar esta página</a></li>					</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label"><span class="uls-settings-trigger" title="Opciones de idioma" tabindex="0" role="button" aria-haspopup="true"></span>
+			<h3 id="p-lang-label">Idiomas</h3>
+
+			<div class="body">
+									<ul>
+											</ul>
+				<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-add wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:NewItem?site=eswikibooks&amp;page=Programaci%C3%B3n+en+C%2B%2B%2FEstructuras+II" title="Agregar enlaces interlingüísticos" class="wbc-editpage">Añadir enlaces</a></span></div>			</div>
+		</div>
+				</div>
+		</div>
+		<div id="footer" role="contentinfo">
+							<ul id="footer-info">
+											<li id="footer-info-lastmod"> Esta página fue modificada por última vez el 3 may 2016 a las 22:16.</li>
+											<li id="footer-info-copyright">El texto está disponible bajo la <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es">Licencia Creative Commons Atribución-CompartirIgual 3.0</a>;
+pueden aplicarse términos adicionales.
+Véase <a href="https://wikimediafoundation.org/wiki/Terms_of_Use/es">Términos de uso</a> para más detalles.</li>
+									</ul>
+							<ul id="footer-places">
+											<li id="footer-places-privacy"><a href="https://meta.wikimedia.org/wiki/Privacy_policy/es" class="extiw" title="m:Privacy policy/es">Política de protección de datos</a></li>
+											<li id="footer-places-about"><a href="https://es.wikibooks.org/wiki/Wikilibros:Acerca_de" title="Wikilibros:Acerca de">Acerca de Wikilibros</a></li>
+											<li id="footer-places-disclaimer"><a href="https://es.wikibooks.org/wiki/Wikilibros:Descargo_general" class="mw-redirect" title="Wikilibros:Descargo general">Exoneraciones</a></li>
+											<li id="footer-places-developers"><a href="https://www.mediawiki.org/wiki/Special:MyLanguage/How_to_contribute">Desarrolladores</a></li>
+											<li id="footer-places-cookiestatement"><a href="https://wikimediafoundation.org/wiki/Cookie_statement/es">Declaración de cookies</a></li>
+											<li id="footer-places-mobileview"><a href="https://es.m.wikibooks.org/w/index.php?title=Programaci%C3%B3n_en_C%2B%2B/Estructuras_II&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Versión para móviles</a></li>
+									</ul>
+										<ul id="footer-icons" class="noprint">
+											<li id="footer-copyrightico">
+							<a href="https://wikimediafoundation.org/"><img src="./Programación en C++_Estructuras II - Wikilibros_files/wikimedia-button.png" srcset="/static/images/wikimedia-button-1.5x.png 1.5x, /static/images/wikimedia-button-2x.png 2x" width="88" height="31" alt="Wikimedia Foundation"></a>						</li>
+											<li id="footer-poweredbyico">
+							<a href="https://www.mediawiki.org/"><img src="./Programación en C++_Estructuras II - Wikilibros_files/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" srcset="/w/resources/assets/poweredby_mediawiki_132x47.png 1.5x, /w/resources/assets/poweredby_mediawiki_176x62.png 2x" width="88" height="31"></a>						</li>
+									</ul>
+						<div style="clear:both"></div>
+		</div>
+		<script>(window.RLQ=window.RLQ||[]).push(function(){mw.loader.state({"ext.globalCssJs.site":"ready","ext.globalCssJs.user":"ready","user":"ready"});mw.loader.load(["mediawiki.toc","ext.shortUrl","mediawiki.action.view.postEdit","site","mediawiki.user","mediawiki.hidpi","mediawiki.page.ready","mediawiki.searchSuggest","ext.eventLogging.subscriber","ext.visualEditor.targetLoader","ext.wikimediaEvents","ext.navigationTiming","schema.UniversalLanguageSelector","ext.uls.eventlogger","ext.uls.interlanguage"]);});</script><script>(window.RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgBackendResponseTime":72,"wgHostname":"mw1214"});});</script>
+	
+
+<div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div></body></html>

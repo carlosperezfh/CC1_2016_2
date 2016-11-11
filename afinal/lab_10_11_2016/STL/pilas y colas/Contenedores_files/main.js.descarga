@@ -1,0 +1,93 @@
+//IIFE TO EXTRACT DIMENSION DATA
+var dimensions = (function(){
+        var str = document.querySelectorAll("[name='ad.size']")[0].getAttributeNode("content").value;
+        var widthMatch = /width\=(\d+)/.exec(str);
+        var heightMatch = /height\=(\d+)/.exec(str);
+        return {
+            width: parseInt(widthMatch[1]),
+            height: parseInt(heightMatch[1])
+        }
+})();
+
+//SET IDs IN DOM TO GLOBAL VARIABLES
+function IDsToVars(){
+    var allElements = document.getElementsByTagName("*");
+    
+    for (var q = 0; q<allElements.length; q++){
+         var el = allElements[q];
+         if (el.id){
+            window[el.id]=document.getElementById(el.id);
+        }
+    }
+};
+
+var tl;
+
+//INITIALIZE
+function init(){
+    document.querySelectorAll('.container')[0].style.width = dimensions.width + 'px';
+    document.querySelectorAll('.container')[0].style.height = dimensions.height + 'px';
+    document.querySelectorAll('.belowClickTag')[0].style.width = dimensions.width + 'px';
+    document.querySelectorAll('.belowClickTag')[0].style.height = dimensions.height + 'px';
+
+    //set timeline
+   
+    tl = new TimelineLite();
+    addListeners();
+    animate();
+}
+
+function addListeners(){
+    
+    //cta.addEventListener("mouseover", ctaover, false);
+}
+
+function ctaover(e)
+{
+
+}
+
+
+//ANIMATE
+function animate(){
+    tl.set(img1, {y:-150});
+    tl.set(pic1mask, {y:-150})
+    tl.set(pic1, {y:-150})
+    tl.set(logo, {alpha:1})
+
+    tl.from(txt1, 1, {alpha:0}, "+=.25");
+
+    tl.to(txt1, .5, {alpha:0}, "+=1.75");
+    tl.to(img1, 2, {y:-50}, "+=1.5");
+    tl.to(pic1mask, 2, {y:-50}, "-=2");
+
+    tl.from(txt2, 1, {alpha:0}, "+=0");
+
+    tl.to(pic1, 2.2, { y:-50}, "-=1");
+
+    tl.to(img1, .75, {alpha:0}, "+=2");
+    tl.to(txt2, .75, {alpha:0}, "-=1");
+    tl.to(pic1, .75, {alpha:0}, "-=1");
+    tl.to(pic1mask, .5, {alpha:0}, "-=1");
+    
+
+    tl.to(logo, 1, {alpha:0}, "-=1");
+    tl.from(txt3, 1, {alpha:0}, "+=0");
+    tl.from(cta, 1, {alpha:0});
+
+    console.log(tl.duration());
+
+ 
+}
+
+function doZidx()
+{
+    //document.getElementById("phone").style.zIndex=11;
+    // TweenLite.set(nflshop, {alpha:1});
+}
+
+function clickThrough(){
+    window.open(window.clicktag);
+}
+
+
